@@ -353,14 +353,12 @@
                     <li><a href="services.html#quote-form" class="text-gray-300 hover:text-white transition duration-300" data-translate-key="nav-quote">Devis</a></li>
                     <li><a href="services.html#interpreter-form" class="text-gray-300 hover:text-white transition duration-300" data-translate-key="nav-interpretation">Interprétation</a></li>
                     <li><a href="contact.html" class="text-gray-300 hover:text-white transition duration-300" data-translate-key="nav-contact">Contact</a></li>
-                    <li><a href="mentions-legales.html" class="text-gray-300 hover:text-white font-medium transition duration-300" data-translate-key="nav-legal">Mentions Légales</a></li>
-                    <li><a href="cgv-cgu.html" class="text-gray-300 hover:text-white font-medium transition duration-300" data-translate-key="nav-cgv-cgu">CGV/CGU</a></li>
                 </ul>
             </div>
             <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400 space-y-4 md:space-y-0">
                 <div class="flex space-x-4">
-                    <a href="#" class="hover:text-white transition duration-300" data-translate-key="footer-legal-mentions">Mentions légales</a>
-                    <a href="#" class="hover:text-white transition duration-300" data-translate-key="footer-cgv-cgu">CGV/CGU</a>
+                    <a href="mentions-legales.html" class="hover:text-white transition duration-300" data-translate-key="footer-legal-mentions">Mentions légales</a>
+                    <a href="cgv-cgu.html" class="hover:text-white transition duration-300" data-translate-key="footer-cgv-cgu">CGV/CGU</a>
                 </div>
                 <div data-translate-key="footer-secure-payment">
                     Paiement sécurisé : <i class="fab fa-stripe mr-2"></i>Stripe <i class="fab fa-paypal ml-4 mr-2"></i>PayPal
@@ -640,7 +638,7 @@
                         element.setAttribute(attrToTranslate, translations[lang][key]);
                     } else {
                         // For text content, preserve HTML if present (like in footer-certification)
-                        if (key.includes('footer-certification')) {
+                        if (key.includes('footer-certification') || key.includes('footer-secure-payment')) {
                             element.innerHTML = translations[lang][key];
                         } else {
                             element.textContent = translations[lang][key];
@@ -682,4 +680,3 @@
     </script>
 </body>
 </html>
-
