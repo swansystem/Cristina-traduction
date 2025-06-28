@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Contact - Agence de Traduction FR RO</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2rem;
+            font-size: 2.25rem; /* text-4xl */
+            font-weight: 700; /* font-bold */
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            width: 60%;
+            height: 4px;
+            background-color: #4F46E5; /* indigo-600 */
+            border-radius: 9999px; /* rounded-full */
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-sm py-4 sticky top-0 z-50">
+        <nav class="container mx-auto px-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-indigo-700" data-translate-key="brand-name">FR | RO Traduction</div>
+            <ul class="flex space-x-6 items-center">
+                <li><a href="index.html" class="text-gray-700 hover:text-indigo-700 font-medium transition duration-300" data-translate-key="nav-home">Accueil</a></li>
+                <li><a href="services.html" class="text-gray-700 hover:text-indigo-700 font-medium transition duration-300" data-translate-key="nav-services">Services</a></li>
+                <li><a href="about.html" class="text-gray-700 hover:text-indigo-700 font-medium transition duration-300" data-translate-key="nav-about">À propos</a></li>
+                <li><a href="contact.html" class="text-gray-700 hover:text-indigo-700 font-medium transition duration-300" data-translate-key="nav-contact">Contact</a></li>
+                <li><a href="services.html#quote-form" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition duration-300 shadow-md" data-translate-key="nav-quote">Devis</a></li>
+                <!-- Language Switcher -->
+                <li class="ml-4">
+                    <select id="language-switcher" class="bg-gray-100 text-gray-800 rounded-lg px-3 py-1 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-600">
+                        <option value="fr">Français</option>
+                        <option value="ro">Română</option>
+                    </select>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contact Introduction Section -->
+    <section class="py-16 md:py-24 bg-gradient-to-r from-indigo-700 to-indigo-900 text-white rounded-b-3xl shadow-xl">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4" data-translate-key="contact-title">Contactez-nous</h1>
+            <p class="text-lg md:text-xl mb-8 opacity-90" data-translate-key="contact-tagline">Une question, un devis, une urgence ? Nous sommes à votre écoute. N'hésitez pas à nous contacter par le moyen de votre choix.</p>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact-form-section" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 max-w-2xl">
+            <h2 class="section-title text-center mx-auto mb-12" data-translate-key="contact-form-title">Envoyez-nous un message</h2>
+            <form class="bg-gray-50 p-8 rounded-2xl shadow-lg">
+                <div class="mb-6">
+                    <label for="contact-name" class="block text-gray-700 text-sm font-bold mb-2" data-translate-key="contact-label-name">Nom complet :</label>
+                    <input type="text" id="contact-name" name="contact-name" class="shadow appearance-none border rounded-xl w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:border-transparent" placeholder="Votre nom" data-translate-key="contact-placeholder-name" data-translate-attr="placeholder">
+                </div>
+                <div class="mb-6">
+                    <label for="contact-email" class="block text-gray-700 text-sm font-bold mb-2" data-translate-key="contact-label-email">E-mail :</label>
+                    <input type="email" id="contact-email" name="contact-email" class="shadow appearance-none border rounded-xl w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:border-transparent" placeholder="votre.email@exemple.com" data-translate-key="contact-placeholder-email" data-translate-attr="placeholder">
+                </div>
+                <div class="mb-6">
+                    <label for="contact-phone" class="block text-gray-700 text-sm font-bold mb-2" data-translate-key="contact-label-phone">Téléphone (facultatif) :</label>
+                    <input type="tel" id="contact-phone" name="contact-phone" class="shadow appearance-none border rounded-xl w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:border-transparent" placeholder="Votre numéro de téléphone" data-translate-key="contact-placeholder-phone" data-translate-attr="placeholder">
+                </div>
+                <div class="mb-8">
+                    <label for="contact-message" class="block text-gray-700 text-sm font-bold mb-2" data-translate-key="contact-label-message">Votre message :</label>
+                    <textarea id="contact-message" name="contact-message" rows="5" class="shadow appearance-none border rounded-xl w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:border-transparent" placeholder="Écrivez votre message ici..." data-translate-key="contact-placeholder-message" data-translate-attr="placeholder"></textarea>
+                </div>
+                <button type="submit" class="bg-indigo-700 hover:bg-indigo-800 text-white font-bold py-3 px-6 rounded-xl w-full transition duration-300 shadow-md transform hover:scale-105" data-translate-key="contact-submit-button">
+                    <i class="fas fa-paper-plane mr-2"></i> Envoyer le message
+                </button>
+            </form>
+
+            <div class="mt-12 text-center">
+                <p class="block text-gray-700 text-sm font-bold mb-4" data-translate-key="contact-other-options">Autres options de contact :</p>
+                <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-8">
+                    <div class="flex items-center">
+                        <i class="fas fa-envelope text-indigo-600 mr-3 text-2xl"></i>
+                        <span class="text-gray-700 text-lg" data-translate-key="contact-email-address">Email : contact@traductionfrro.com</span>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fab fa-whatsapp text-green-500 mr-3 text-2xl"></i>
+                        <span class="text-gray-700 text-lg" data-translate-key="contact-whatsapp-phone">WhatsApp / Téléphone : +40 7XY XXX XXX</span>
+                    </div>
+                </div>
+                <!-- Optional Google Map placeholder -->
+                <!--
+                <div class="mt-8">
+                    <h4 class="text-xl font-bold text-gray-800 mb-4" data-translate-key="contact-map-title">Où nous trouver à Bucarest</h4>
+                    <div class="bg-gray-200 rounded-lg overflow-hidden" style="height: 300px;">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2848.847050302307!2d26.09919011558237!3d44.42676777910118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b1f9b1e9b2b5f5%3A0x6b7b7b7b7b7b7b7b!2sBucarest%2C%20Roumanie!5e0!3m2!1sfr!2sro!4v1678901234567!5m2!1sfr!2sro"
+                            width="100%"
+                            height="100%"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                        ></iframe>
+                    </div>
+                    <p class="text-gray-600 text-sm mt-2" data-translate-key="contact-address-note">[Votre adresse à Bucarest]</p>
+                </div>
+                -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12 rounded-t-3xl">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-8 space-y-4 md:space-y-0">
+                <div class="text-xl font-bold text-indigo-400" data-translate-key="footer-brand">FR | RO Traduction</div>
+                <ul class="flex space-x-6">
+                    <li><a href="index.html" class="text-gray-300 hover:text-white transition duration-300" data-translate-key="nav-home">Accueil</a></li>
+                    <li><a href="services.html" class="text-gray-300 hover:text-white transition duration-300" data-translate-key="nav-services">Services</a></li>
+                    <li><a href="services.html#quote-form" class="text-gray-300 hover:text-white transition duration-300" data-translate-key="nav-quote">Devis</a></li>
+                    <li><a href="services.html#interpreter-form" class="text-gray-300 hover:text-white transition duration-300" data-translate-key="nav-interpretation">Interprétation</a></li>
+                    <li><a href="contact.html" class="text-gray-300 hover:text-white transition duration-300" data-translate-key="nav-contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400 space-y-4 md:space-y-0">
+                <div class="flex space-x-4">
+                    <a href="mentions-legales.html" class="hover:text-white transition duration-300" data-translate-key="footer-legal-mentions">Mentions légales</a>
+                    <a href="cgv-cgu.html" class="hover:text-white transition duration-300" data-translate-key="footer-cgv-cgu">CGV/CGU</a>
+                </div>
+                <div data-translate-key="footer-secure-payment">
+                    Paiement sécurisé : <i class="fab fa-stripe mr-2"></i>Stripe <i class="fab fa-paypal ml-4 mr-2"></i>PayPal
+                </div>
+                <div data-translate-key="footer-certification">
+                    Certification : Cristina Vlad + n° d'assermentation [XXXX/20XX]
+                </div>
+                 <!-- Language Switcher in Footer -->
+                <div class="ml-4">
+                    <label for="site-language-footer" class="sr-only" data-translate-key="contact-label-site-language">Langue du site :</label>
+                    <select id="site-language-footer" name="site-language" class="bg-gray-700 text-white rounded-lg px-3 py-1 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-600">
+                        <option value="fr" data-translate-key="contact-option-fr">Français</option>
+                        <option value="ro">Română</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links and cross-page navigation
+        document.querySelectorAll('a[href]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href.startsWith('#')) {
+                    // Internal anchor link on the same page
+                    e.preventDefault();
+                    const targetId = href.substring(1);
+                    document.getElementById(targetId).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                } else if (href.includes('.html#')) {
+                    // Link to an anchor on another HTML page
+                    // Let default behavior handle navigation, then scroll
+                    // No need to preventDefault for cross-page anchors, browser handles it post-load
+                }
+            });
+        });
+
+        // Language translation logic
+        const translations = {
+            fr: {
+                // Header & Navigation
+                'page-title': 'Contact - Agence de Traduction FR RO',
+                'brand-name': 'FR | RO Traduction',
+                'nav-home': 'Accueil',
+                'nav-services': 'Services',
+                'nav-about': 'À propos',
+                'nav-contact': 'Contact',
+                'nav-quote': 'Devis',
+                'nav-interpretation': 'Interprétation',
+
+                // Contact Section
+                'contact-title': 'Contactez-nous',
+                'contact-tagline': 'Une question, un devis, une urgence ? Nous sommes à votre écoute. N\'hésitez pas à nous contacter par le moyen de votre choix.',
+                'contact-form-title': 'Envoyez-nous un message',
+                'contact-label-name': 'Nom complet :',
+                'contact-placeholder-name': 'Votre nom',
+                'contact-label-email': 'E-mail :',
+                'contact-placeholder-email': 'votre.email@exemple.com',
+                'contact-label-phone': 'Téléphone (facultatif) :',
+                'contact-placeholder-phone': 'Votre numéro de téléphone',
+                'contact-label-message': 'Votre message :',
+                'contact-placeholder-message': 'Écrivez votre message ici...',
+                'contact-submit-button': 'Envoyer le message',
+                'contact-other-options': 'Autres options de contact :',
+                'contact-email-address': 'Email : contact@traductionfrro.com',
+                'contact-whatsapp-phone': 'WhatsApp / Téléphone : +40 7XY XXX XXX',
+                'contact-label-site-language': 'Langue du site :',
+                'contact-option-fr': 'Français',
+                'contact-option-ro': 'Română',
+                // 'contact-map-title': 'Où nous trouver à Bucarest',
+                // 'contact-address-note': '[Votre adresse à Bucarest]',
+
+                // Footer
+                'footer-brand': 'FR | RO Traduction',
+                'footer-legal-mentions': 'Mentions légales',
+                'footer-cgv-cgu': 'CGV/CGU',
+                'footer-secure-payment': 'Paiement sécurisé :',
+                'footer-certification': 'Certification : Cristina Vlad + n° d\'assermentation [XXXX/20XX]',
+            },
+            ro: {
+                // Header & Navigation
+                'page-title': 'Contact - Agenție de Traduceri FR RO',
+                'brand-name': 'FR | RO Traducere',
+                'nav-home': 'Acasă',
+                'nav-services': 'Servicii',
+                'nav-about': 'Despre Noi',
+                'nav-contact': 'Contact',
+                'nav-quote': 'Ofertă',
+                'nav-interpretation': 'Interpretare',
+
+                // Contact Section
+                'contact-title': 'Contactați-ne',
+                'contact-tagline': 'O întrebare, o ofertă, o urgență ? Suntem la dispoziția dumneavoastră. Nu ezitați să ne contactați prin metoda preferată.',
+                'contact-form-title': 'Trimiteți-ne un mesaj',
+                'contact-label-name': 'Nume complet :',
+                'contact-placeholder-name': 'Numele dumneavoastră',
+                'contact-label-email': 'E-mail :',
+                'contact-placeholder-email': 'adresa.dumneavoastra@exemplu.com',
+                'contact-label-phone': 'Telefon (opțional) :',
+                'contact-placeholder-phone': 'Numărul dumneavoastră de telefon',
+                'contact-label-message': 'Mesajul dumneavoastră :',
+                'contact-placeholder-message': 'Scrieți mesajul aici...',
+                'contact-submit-button': 'Trimite mesajul',
+                'contact-other-options': 'Alte opțiuni de contact :',
+                'contact-email-address': 'Email : contact@traduceri-fr-ro.com',
+                'contact-whatsapp-phone': 'WhatsApp / Telefon : +40 7XY XXX XXX',
+                'contact-label-site-language': 'Limba site-ului :',
+                'contact-option-fr': 'Franceză',
+                'contact-option-ro': 'Română',
+                // 'contact-map-title': 'Unde ne găsiți în București',
+                // 'contact-address-note': '[Adresa dumneavoastră în București]',
+
+                // Footer
+                'footer-brand': 'FR | RO Traducere',
+                'footer-legal-mentions': 'Mențiuni legale',
+                'footer-cgv-cgu': 'Termeni și Condiții',
+                'footer-secure-payment': 'Plată securizată :',
+                'footer-certification': 'Certificare : Cristina Vlad + nr. autorizație [XXXX/20XX]',
+            }
+        };
+
+        function setLanguage(lang) {
+            document.documentElement.lang = lang; // Set HTML lang attribute
+            document.getElementById('page-title').textContent = translations[lang]['page-title'];
+
+            document.querySelectorAll('[data-translate-key]').forEach(element => {
+                const key = element.getAttribute('data-translate-key');
+                const attrToTranslate = element.getAttribute('data-translate-attr');
+
+                if (translations[lang] && translations[lang][key]) {
+                    if (attrToTranslate) {
+                        // For attributes like placeholder
+                        element.setAttribute(attrToTranslate, translations[lang][key]);
+                    } else {
+                        // For text content, preserve HTML if present (like in footer-certification)
+                        if (key.includes('footer-certification') || key.includes('footer-secure-payment')) {
+                            element.innerHTML = translations[lang][key];
+                        } else {
+                            element.textContent = translations[lang][key];
+                        }
+                    }
+                }
+            });
+
+            // Update language switcher in header if changed from footer or vice-versa
+            const langSwitcherHeader = document.getElementById('language-switcher');
+            const langSwitcherFooter = document.getElementById('site-language-footer');
+            if (langSwitcherHeader && langSwitcherHeader.value !== lang) {
+                langSwitcherHeader.value = lang;
+            }
+            if (langSwitcherFooter && langSwitcherFooter.value !== lang) {
+                langSwitcherFooter.value = lang;
+            }
+        }
+
+        // Initialize language on page load based on saved preference or default to French
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('siteLanguage') || 'fr';
+            setLanguage(savedLang);
+        });
+
+        // Event listener for header language switcher
+        document.getElementById('language-switcher').addEventListener('change', (event) => {
+            const newLang = event.target.value;
+            localStorage.setItem('siteLanguage', newLang); // Save preference
+            setLanguage(newLang);
+        });
+
+        // Event listener for footer language switcher
+        document.getElementById('site-language-footer').addEventListener('change', (event) => {
+            const newLang = event.target.value;
+            localStorage.setItem('siteLanguage', newLang); // Save preference
+            setLanguage(newLang);
+        });
+    </script>
+</body>
+</html>

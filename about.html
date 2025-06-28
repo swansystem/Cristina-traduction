@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">À Propos - Agence de Traduction FR RO</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2rem;
+            font-size: 2.25rem; /* text-4xl */
+            font-weight: 700; /* font-bold */
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            width: 60%;
+            height: 4px;
+            background-color: #4F46E5; /* indigo-600 */
+            border-radius: 9999px; /* rounded-full */
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-sm py-4 sticky top-0 z-50">
+        <nav class="container mx-auto px-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-indigo-700" data-translate-key="brand-name">FR | RO Traduction</div>
+            <ul class="flex space-x-6 items-center">
+                <li><a href="index.html" class="text-gray-700 hover:text-indigo-700 font-medium transition duration-300" data-translate-key="nav-home">Accueil</a></li>
+                <li><a href="services.html" class="text-gray-700 hover:text-indigo-700 font-medium transition duration-300" data-translate-key="nav-services">Services</a></li>
+                <li><a href="about.html" class="text-gray-700 hover:text-indigo-700 font-medium transition duration-300" data-translate-key="nav-about">À propos</a></li>
+                <li><a href="contact.html" class="text-gray-700 hover:text-indigo-700 font-medium transition duration-300" data-translate-key="nav-contact">Contact</a></li>
+                <li><a href="services.html#quote-form" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition duration-300 shadow-md" data-translate-key="nav-quote">Devis</a></li>
+                <!-- Language Switcher -->
+                <li class="ml-4">
+                    <select id="language-switcher" class="bg-gray-100 text-gray-800 rounded-lg px-3 py-1 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-600">
+                        <option value="fr">Français</option>
+                        <option value="ro">Română</option>
+                    </select>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- About Introduction Section -->
+    <section class="py-16 md:py-24 bg-gradient-to-r from-indigo-700 to-indigo-900 text-white rounded-b-3xl shadow-xl">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4" data-translate-key="about-title">À propos</h1>
+            <p class="text-lg md:text-xl mb-8 opacity-90" data-translate-key="about-subtitle">Une expertise humaine, certifiée et réactive au service de vos besoins.</p>
+        </div>
+    </section>
+
+    <!-- Cristina's Introduction Section -->
+    <section id="cristina-intro" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="bg-gray-50 p-8 rounded-2xl shadow-lg flex flex-col md:flex-row items-center md:items-start gap-8">
+                <!-- Photo -->
+                <img src="https://placehold.co/180x180/C7D2FE/4F46E5?text=Cristina" alt="Portrait de Cristina Vlad, traductrice assermentée" class="w-48 h-48 rounded-full object-cover shadow-md border-4 border-indigo-300 flex-shrink-0" data-translate-attr="alt">
+                
+                <!-- Text Content -->
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-800 mb-4" data-translate-key="cristina-name-title-about">Cristina Vlad – Traductrice-Interprète Assermentée</h2>
+                    <p class="text-xl text-gray-700 mb-4" data-translate-key="cristina-tagline-about">Votre passerelle de confiance entre la France et la Roumanie</p>
+                    <p class="text-md text-gray-600 mb-4" data-translate-key="cristina-intro-text-about">
+                        Je suis Cristina Vlad, traductrice-interprète assermentée auprès de la Cour d'appel de Bucarest (N° d’assermentation : 1234/2010), spécialisée en traduction juridique, administrative et notariale entre le français et le roumain.
+                    </p>
+                    <p class="text-md text-gray-600 mb-6" data-translate-key="cristina-accompany-text-about">
+                        J’accompagne particuliers, couples, entreprises et institutions dans leurs démarches sensibles : actes d’état civil, dossiers de mariage, contrats, documents juridiques ou d’investissement. Chaque traduction est réalisée avec rigueur, fidélité et confidentialité, dans le respect des exigences légales françaises et roumaines.
+                    </p>
+
+                    <h3 class="text-2xl font-bold text-gray-800 mb-3" data-translate-key="cristina-journey-title-about">🎓 Mon parcours</h3>
+                    <ul class="list-disc list-inside text-gray-600 mb-6 space-y-1">
+                        <li data-translate-key="cristina-journey-item1-about">🥇 Médaille d’or aux Olympiades nationales de français en Roumanie</li>
+                        <li data-translate-key="cristina-journey-item2-about">🎓 Licence en traduction et interprétation – Université de Bucarest</li>
+                        <li data-translate-key="cristina-journey-item3-about">🎓 Master 2 en didactique du français – Université Bucarest</li>
+                    </ul>
+                    <p class="text-md text-gray-600 mb-6" data-translate-key="cristina-double-culture-about">
+                        Mon parcours universitaire et ma pratique quotidienne m’ont permis de développer une double culture juridique et linguistique – essentielle pour une traduction vraiment conforme et compréhensible dans les deux systèmes.
+                    </p>
+
+                    <h3 class="2xl font-bold text-gray-800 mb-3" data-translate-key="cristina-location-title-about">📍 Basée à Bucarest, active en ligne</h3>
+                    <p class="text-md text-gray-600 mb-6" data-translate-key="cristina-location-text-about">
+                        Je propose mes services 100 % à distance pour toute la France et la Roumanie, mais je suis également disponible en présentiel à Bucarest pour les missions d’interprétation (mariage, notaire, administration).
+                    </p>
+
+                    <p class="text-xl text-gray-700 font-semibold mt-8" data-translate-key="cristina-cta-question-about">👉 Vous avez un document à faire traduire ? Une démarche à préparer ?</p>
+                    <p class="text-xl text-gray-700 font-semibold mb-6" data-translate-key="cristina-cta-answer-about">Je vous réponds directement, avec professionnalisme et clarté.</p>
+                    
+                    <!-- Moved "Why Choose Us" section here -->
+                    <h4 class="text-2xl font-bold text-gray-800 mb-4 mt-8" data-translate-key="about-why-choose-us-title">Pourquoi Nous Choisir ?</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-center bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+                            <i class="fas fa-globe-americas text-3xl text-blue-600 mr-4"></i>
+                            <div>
+                                <h5 class="font-bold text-gray-800" data-translate-key="about-advantage1-title">Double Ancrage Culturel</h5>
+                                <p class="text-gray-600" data-translate-key="about-advantage1-desc">Une parfaite maîtrise des deux systèmes administratifs et culturels pour des traductions non seulement exactes, mais aussi contextuellement pertinentes.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
+                            <i class="fas fa-lock text-3xl text-green-600 mr-4"></i>
+                            <div>
+                                <h5 class="font-bold text-gray-800" data-translate-key="about-advantage2-title">Confidentialité Absolue</h5>
+                                <p class="text-gray-600" data-translate-key="about-advantage2-desc">Vos documents sont traités avec la plus grande discrétion et un respect total de la confidentialité.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center bg-purple-50 p-4 rounded-lg border-l-4 border-purple-500">
+                            <i class="fas fa-clock text-3xl text-purple-600 mr-4"></i>
+                            <div>
+                                <h5 class="font-bold text-gray-800" data-translate-key="about-advantage3-title">Réactivité & Personnalisation</h5>
+                                <p class="text-gray-600" data-translate-key="about-advantage3-desc">Un service sur mesure, rapide et disponible, que ce soit en présentiel à Bucarest ou à distance.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-500">
+                            <i class="fas fa-certificate text-3xl text-yellow-600 mr-4"></i>
+                            <div>
+                                <h5 class="font-bold text-gray-800" data-translate-key="about-advantage4-title">Fiabilité Légale</h5>
+                                <p class="text-gray-600" data-translate-key="about-advantage4-desc">Des traductions fidèles, rigoureuses et légalement reconnues, vous assurant une tranquillité d'esprit.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-8">
+                        <a href="contact.html" class="bg-indigo-700 text-white px-6 py-3 rounded-xl hover:bg-indigo-800 transition duration-300 shadow-md" data-translate-key="about-cta">
+                            <i class="fas fa-comment-dots mr-2"></i> Besoin d'un accompagnement personnalisé ?
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12 rounded-t-3xl">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-8 space-y-4 md:space-y-0">
+                <div class="text-xl font-bold text-indigo-400" data-translate-key="footer-brand">FR | RO Traduction</div>
+                <ul class="flex space-x-6">
+                    <li><a href="index.html" class="text-gray-300 hover:text-white transition duration-300" data-translate-key="nav-home">Accueil</a></li>
+                    <li><a href="services.html" class="text-gray-300 hover:text-white transition duration-300" data-translate-key="nav-services">Services</a></li>
+                    <li><a href="about.html" class="text-gray-300 hover:text-white transition duration-300" data-translate-key="nav-about">À propos</a></li>
+                    <li><a href="contact.html" class="text-gray-300 hover:text-white transition duration-300" data-translate-key="nav-contact">Contact</a></li>
+                    <li><a href="services.html#quote-form" class="text-gray-300 hover:text-white transition duration-300" data-translate-key="nav-quote">Devis</a></li>
+                </ul>
+            </div>
+            <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400 space-y-4 md:space-y-0">
+                <div class="flex space-x-4">
+                    <a href="mentions-legales.html" class="hover:text-white transition duration-300" data-translate-key="footer-legal-mentions">Mentions légales</a>
+                    <a href="cgv-cgu.html" class="hover:text-white transition duration-300" data-translate-key="footer-cgv-cgu">CGV/CGU</a>
+                </div>
+                <div data-translate-key="footer-secure-payment">
+                    Paiement sécurisé : <i class="fab fa-stripe mr-2"></i>Stripe <i class="fab fa-paypal ml-4 mr-2"></i>PayPal
+                </div>
+                <div data-translate-key="footer-certification">
+                    Certification : Cristina Vlad + n° d'assermentation [1234/2010]
+                </div>
+                 <!-- Language Switcher in Footer -->
+                <div class="ml-4">
+                    <label for="site-language-footer" class="sr-only" data-translate-key="contact-label-site-language">Langue du site :</label>
+                    <select id="site-language-footer" name="site-language" class="bg-gray-700 text-white rounded-lg px-3 py-1 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-600">
+                        <option value="fr" data-translate-key="contact-option-fr">Français</option>
+                        <option value="ro">Română</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links and cross-page navigation
+        document.querySelectorAll('a[href]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href.startsWith('#')) {
+                    // Internal anchor link on the same page
+                    e.preventDefault();
+                    const targetId = href.substring(1);
+                    document.getElementById(targetId).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                } else if (href.includes('.html#')) {
+                    // Link to an anchor on another HTML page
+                    // Let default behavior handle navigation, then scroll
+                    // No need to preventDefault for cross-page anchors, browser handles it post-load
+                }
+            });
+        });
+
+        // Language translation logic
+        const translations = {
+            fr: {
+                // Header & Navigation
+                'page-title': 'À Propos - Agence de Traduction FR RO',
+                'brand-name': 'FR | RO Traduction',
+                'nav-home': 'Accueil',
+                'nav-services': 'Services',
+                'nav-about': 'À propos',
+                'nav-contact': 'Contact',
+                'nav-quote': 'Devis',
+                'nav-interpretation': 'Interprétation',
+
+                // About Section
+                'about-title': 'À propos',
+                'about-subtitle': 'Une expertise humaine, certifiée et réactive au service de vos besoins.',
+                'cristina-name-title-about': 'Cristina Vlad – Traductrice-Interprète Assermentée',
+                'cristina-tagline-about': 'Votre passerelle de confiance entre la France et la Roumanie',
+                'cristina-intro-text-about': 'Je suis Cristina Vlad, traductrice-interprète assermentée auprès de la Cour d\'appel de Bucarest (N° d’assermentation : 1234/2010), spécialisée en traduction juridique, administrative et notariale entre le français et le roumain.',
+                'cristina-accompany-text-about': 'J’accompagne particuliers, couples, entreprises et institutions dans leurs démarches sensibles : actes d’état civil, dossiers de mariage, contrats, documents juridiques ou d’investissement. Chaque traduction est réalisée avec rigueur, fidélité et confidentialité, dans le respect des exigences légales françaises et roumaines.',
+                'cristina-journey-title-about': '🎓 Mon parcours',
+                'cristina-journey-item1-about': '🥇 Médaille d’or aux Olympiades nationales de français en Roumanie',
+                'cristina-journey-item2-about': '🎓 Licence en traduction et interprétation – Université de Bucarest',
+                'cristina-journey-item3-about': '🎓 Master 2 en didactique du français – Université Bucarest',
+                'cristina-double-culture-about': 'Mon parcours universitaire et ma pratique quotidienne m’ont permis de développer une double culture juridique et linguistique – essentielle pour une traduction vraiment conforme et compréhensible dans les deux systèmes.',
+                'cristina-location-title-about': '📍 Basée à Bucarest, active en ligne',
+                'cristina-location-text-about': 'Je propose mes services 100 % à distance pour toute la France et la Roumanie, mais je suis également disponible en présentiel à Bucarest pour les missions d’interprétation (mariage, notaire, administration).',
+                'cristina-cta-question-about': '👉 Vous avez un document à faire traduire ? Une démarche à préparer ?',
+                'cristina-cta-answer-about': 'Je vous réponds directement, avec professionnalisme et clarté.',
+                'contact-email-button': 'Envoyer un e-mail',
+                'contact-whatsapp-button': 'Contacter par WhatsApp',
+                'portrait-alt-text': 'Portrait de Cristina Vlad, traductrice assermentée',
+                
+                // Why Choose Us Section
+                'about-why-choose-us-title': 'Pourquoi Nous Choisir ?',
+                'about-advantage1-title': 'Double Ancrage Culturel',
+                'about-advantage1-desc': 'Une parfaite maîtrise des deux systèmes administratifs et culturels pour des traductions non seulement exactes, mais aussi contextuellement pertinentes.',
+                'about-advantage2-title': 'Confidentialité Absolue',
+                'about-advantage2-desc': 'Vos documents sont traités avec la plus grande discrétion et un respect total de la confidentialité.',
+                'about-advantage3-title': 'Réactivité & Personnalisation',
+                'about-advantage3-desc': 'Un service sur mesure, rapide et disponible, que ce soit en présentiel à Bucarest ou à distance.',
+                'about-advantage4-title': 'Fiabilité Légale',
+                'about-advantage4-desc': 'Des traductions fidèles, rigoureuses et légalement reconnues, vous assurant une tranquillité d\'esprit.',
+                'about-cta': 'Besoin d\'un accompagnement personnalisé ?',
+
+
+                // Footer
+                'footer-brand': 'FR | RO Traduction',
+                'footer-legal-mentions': 'Mentions légales',
+                'footer-cgv-cgu': 'CGV/CGU',
+                'footer-secure-payment': 'Paiement sécurisé :',
+                'footer-certification': 'Certification : Cristina Vlad + n° d\'assermentation [1234/2010]',
+                'contact-label-site-language': 'Langue du site :',
+                'contact-option-fr': 'Français',
+                'contact-option-ro': 'Română',
+            },
+            ro: {
+                // Header & Navigation
+                'page-title': 'Despre Noi - Agenție de Traduceri FR RO',
+                'brand-name': 'FR | RO Traducere',
+                'nav-home': 'Acasă',
+                'nav-services': 'Servicii',
+                'nav-about': 'Despre Noi',
+                'nav-contact': 'Contact',
+                'nav-quote': 'Ofertă',
+                'nav-interpretation': 'Interpretare',
+
+                // About Section
+                'about-title': 'Despre noi',
+                'about-subtitle': 'O expertiză umană, certificată și reactivă în serviciul nevoilor dumneavoastră.',
+                'cristina-name-title-about': 'Cristina Vlad – Traducător-Interpret Autorizat',
+                'cristina-tagline-about': 'Puntea dumneavoastră de încredere între Franța și România',
+                'cristina-intro-text-about': 'Sunt Cristina Vlad, traducător-interpret autorizat pe lângă Curtea de Apel București (Nr. autorizație : 1234/2010), specializată în traduceri juridice, administrative și notariale între franceză și română.',
+                'cristina-accompany-text-about': 'Însoțesc persoane fizice, cupluri, companii și instituții în demersurile lor sensibile: acte de stare civilă, dosare de căsătorie, contracte, documente juridice sau de investiții. Fiecare traducere este realizată cu rigoare, fidelitate și confidențialitate, respectând cerințele legale franceze și române.',
+                'cristina-journey-title-about': '🎓 Parcursul meu',
+                'cristina-journey-item1-about': '🥇 Medalie de aur la Olimpiadele naționale de franceză în România',
+                'cristina-journey-item2-about': '🎓 Licență în traducere și interpretare – Universitatea din București',
+                'cristina-journey-item3-about': '🎓 Master 2 în didactică franceză – Universitatea din București',
+                'cristina-double-culture-about': 'Parcursul meu universitar și practica zilnică mi-au permis să dezvolt o dublă cultură juridică și lingvistică – esențială pentru o traducere cu adevărat conformă și comprehensibilă în ambele sisteme.',
+                'cristina-location-title-about': '📍 Cu sediul în București, activă online',
+                'cristina-location-text-about': 'Ofer serviciile mele 100% la distanță pentru toată Franța și România, dar sunt disponibilă și în persoană în București pentru misiuni de interpretare (căsătorie, notar, administrație).',
+                'cristina-cta-question-about': '👉 Aveți un document de tradus ? Un demers de pregătit ?',
+                'cristina-cta-answer-about': 'Vă răspund direct, cu profesionalism și claritate.',
+                'contact-email-button': 'Trimite un e-mail',
+                'contact-whatsapp-button': 'Contactează prin WhatsApp',
+                'portrait-alt-text': 'Portretul Cristinei Vlad, traducătoare autorizată',
+
+                // Why Choose Us Section
+                'about-why-choose-us-title': 'De ce să ne alegeți ?',
+                'about-advantage1-title': 'Dublă Ancorare Culturală',
+                'about-advantage1-desc': 'O stăpânire perfectă a celor două sisteme administrative și culturale pentru traduceri nu doar exacte, ci și contextual relevante.',
+                'about-advantage2-title': 'Confidențialitate Absolută',
+                'about-advantage2-desc': 'Documentele dumneavoastră sunt tratate cu cea mai mare discție și un respect total al confidențialității.',
+                'about-advantage3-title': 'Reactivitate & Personalizare',
+                'about-advantage3-desc': 'Un serviciu personalizat, rapid și disponibil, atât în persoană în București, cât și la distanță.',
+                'about-advantage4-title': 'Fiabilitate Legală',
+                'about-advantage4-desc': 'Traduceri fidele, riguroase și recunoscute legal, asigurându-vă liniștea.',
+
+                // Footer
+                'footer-brand': 'FR | RO Traducere',
+                'footer-legal-mentions': 'Mențiuni legale',
+                'footer-cgv-cgu': 'Termeni și Condiții',
+                'footer-secure-payment': 'Plată securizată :',
+                'footer-certification': 'Certificare : Cristina Vlad + nr. autorizație [1234/2010]',
+                'contact-label-site-language': 'Limba site-ului :',
+                'contact-option-fr': 'Franceză',
+                'contact-option-ro': 'Română',
+            }
+        };
+
+        function setLanguage(lang) {
+            document.documentElement.lang = lang; // Set HTML lang attribute
+            document.getElementById('page-title').textContent = translations[lang]['page-title'];
+
+            document.querySelectorAll('[data-translate-key]').forEach(element => {
+                const key = element.getAttribute('data-translate-key');
+                const attrToTranslate = element.getAttribute('data-translate-attr');
+
+                if (translations[lang] && translations[lang][key]) {
+                    if (attrToTranslate) {
+                        // For attributes like placeholder or alt text
+                        element.setAttribute(attrToTranslate, translations[lang][key]);
+                    } else {
+                        // For text content, preserve HTML if present (like in footer-certification)
+                        if (key.includes('footer-certification') || key.includes('cristina-intro-text-about') || key.includes('cristina-accompany-text-about') || key.includes('cristina-double-culture-about') || key.includes('cristina-commitment-text-about') || key.includes('cristina-journey-item1-about') || key.includes('cristina-journey-item2-about') || key.includes('cristina-journey-item3-about') || key.includes('footer-secure-payment')) {
+                            element.innerHTML = translations[lang][key];
+                        } else {
+                            element.textContent = translations[lang][key];
+                        }
+                    }
+                }
+            });
+
+            // Update language switcher in header if changed from footer or vice-versa
+            const langSwitcherHeader = document.getElementById('language-switcher');
+            const langSwitcherFooter = document.getElementById('site-language-footer');
+            if (langSwitcherHeader && langSwitcherHeader.value !== lang) {
+                langSwitcherHeader.value = lang;
+            }
+            if (langSwitcherFooter && langSwitcherFooter.value !== lang) {
+                langSwitcherFooter.value = lang;
+            }
+        }
+
+        // Initialize language on page load based on saved preference or default to French
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('siteLanguage') || 'fr';
+            setLanguage(savedLang);
+        });
+
+        // Event listener for header language switcher
+        document.getElementById('language-switcher').addEventListener('change', (event) => {
+            const newLang = event.target.value;
+            localStorage.setItem('siteLanguage', newLang); // Save preference
+            setLanguage(newLang);
+        });
+
+        // Event listener for footer language switcher
+        document.getElementById('site-language-footer').addEventListener('change', (event) => {
+            const newLang = event.target.value;
+            localStorage.setItem('siteLanguage', newLang); // Save preference
+            setLanguage(newLang);
+        });
+    </script>
+</body>
+</html>

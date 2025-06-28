@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Services - Agence de Traduction FR RO</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2rem;
+            font-size: 2.25rem; /* text-4xl */
+            font-weight: 700; /* font-bold */
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            width: 60%;
+            height: 4px;
+            background-color: #4F46E5; /* indigo-600 */
+            border-radius: 9999px; /* rounded-full */
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-sm py-4 sticky top-0 z-50">
+        <nav class="container mx-auto px-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-indigo-700" data-translate-key="brand-name">FR | RO Traduction</div>
+            <ul class="flex space-x-6 items-center">
+                <li><a href="index.html" class="text-gray-700 hover:text-indigo-700 font-medium transition duration-300" data-translate-key="nav-home">Accueil</a></li>
+                <li><a href="services.html" class="text-gray-700 hover:text-indigo-700 font-medium transition duration-300" data-translate-key="nav-services">Services</a></li>
+                <li><a href="about.html" class="text-gray-700 hover:text-indigo-700 font-medium transition duration-300" data-translate-key="nav-about">À propos</a></li>
+                <li><a href="contact.html" class="text-gray-700 hover:text-indigo-700 font-medium transition duration-300" data-translate-key="nav-contact">Contact</a></li>
+                <li><a href="services.html#quote-form" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition duration-300 shadow-md" data-translate-key="nav-quote">Devis</a></li>
+                <!-- Language Switcher -->
+                <li class="ml-4">
+                    <select id="language-switcher" class="bg-gray-100 text-gray-800 rounded-lg px-3 py-1 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-600">
+                        <option value="fr">Français</option>
+                        <option value="ro">Română</option>
+                    </select>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Services Introduction Section -->
+    <section class="py-16 md:py-24 bg-gradient-to-r from-indigo-700 to-indigo-900 text-white rounded-b-3xl shadow-xl">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4" data-translate-key="services-main-title">Nos Services de Traduction & Interprétation</h1>
+            <p class="text-lg md:text-xl mb-8 opacity-90" data-translate-key="services-intro">Nous offrons une gamme complète de services linguistiques pour répondre à vos besoins spécifiques entre le français et le roumain, avec rigueur et confidentialité.</p>
+        </div>
+    </section>
+
+    <!-- Detailed Services Section -->
+    <section id="detailed-services" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Service Card: Traduction assermentée FR RO -->
+                <div class="bg-gray-100 p-8 rounded-2xl shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="text-5xl text-indigo-600 mb-6 text-center"><i class="fas fa-balance-scale"></i></div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center" data-translate-key="service-sworn-title">Traduction Assermentée FR-RO : Validité Officielle Garantie</h3>
+                    <p class="text-gray-600 mb-6 text-center" data-translate-key="service-sworn-desc">Nos traducteurs-interprètes assermentés, accrédités près la Cour d'Appel de Bucarest, réalisent des traductions officielles reconnues par les administrations françaises et roumaines.</p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-800" data-translate-key="service-sworn-category1-title">Documents d'État Civil :</h4>
+                                <ul class="list-disc list-inside text-gray-700 ml-5">
+                                    <li data-translate-key="service-sworn-item1-1">Actes de naissance, mariage, divorce, décès</li>
+                                    <li data-translate-key="service-sworn-item1-2">Livret de famille</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-800" data-translate-key="service-sworn-category2-title">Diplômes & Scolarité :</h4>
+                                <ul class="list-disc list-inside text-gray-700 ml-5">
+                                    <li data-translate-key="service-sworn-item2-1">Diplômes universitaires, relevés de notes</li>
+                                    <li data-translate-key="service-sworn-item2-2">Certificats de scolarité, programmes d'études</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-800" data-translate-key="service-sworn-category3-title">Documents Juridiques :</h4>
+                                <ul class="list-disc list-inside text-gray-700 ml-5">
+                                    <li data-translate-key="service-sworn-item3-1">Jugements, procurations, contrats</li>
+                                    <li data-translate-key="service-sworn-item3-2">Statuts d'entreprise, Kbis, casiers judiciaires</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-800" data-translate-key="service-sworn-category4-title">Documents Administratifs & Autres :</h4>
+                                <ul class="list-disc list-inside text-gray-700 ml-5">
+                                    <li data-translate-key="service-sworn-item4-1">Attestations, permis de conduire, pièces d'identité</li>
+                                    <li data-translate-key="service-sworn-item4-2">Testaments, rapports médicaux (officiels)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-500 mt-4 text-center" data-translate-key="service-sworn-delivery">Envoi du document traduit par e-mail (PDF signé) ou par courrier si demandé.</p>
+                    <div class="text-center mt-6">
+                        <a href="#quote-form" class="bg-indigo-700 text-white px-6 py-3 rounded-xl hover:bg-indigo-800 transition duration-300 shadow-md" data-translate-key="service-sworn-cta">
+                            <i class="fas fa-file-invoice-dollar mr-2"></i> Demandez votre devis gratuit
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service Card: Traduction spécialisée -->
+                <div class="bg-gray-100 p-8 rounded-2xl shadow-lg hover:shadow-xl transition duration-300">
+                    <div class="text-5xl text-indigo-600 mb-6 text-center"><i class="fas fa-book-reader"></i></div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center" data-translate-key="service-specialized-title">Traduction Spécialisée : Précision Terminologique pour Vos Domaines Clés</h3>
+                    <p class="text-gray-600 mb-6 text-center" data-translate-key="service-specialized-desc">Au-delà de l'assermentation, nous maîtrisons les terminologies spécifiques pour vos documents techniques et professionnels, garantissant une compréhension exacte et une fidélité impeccable.</p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-800" data-translate-key="service-specialized-category1-title">Juridique :</h4>
+                                <ul class="list-disc list-inside text-gray-700 ml-5">
+                                    <li data-translate-key="service-specialized-item1-1">Contrats complexes, accords commerciaux</li>
+                                    <li data-translate-key="service-specialized-item1-2">Décisions de justice, législations</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-800" data-translate-key="service-specialized-category2-title">Administratif & Immobilier :</h4>
+                                <ul class="list-disc list-inside text-gray-700 ml-5">
+                                    <li data-translate-key="service-specialized-item2-1">Dossiers d'immigration, documents fonciers</li>
+                                    <li data-translate-key="service-specialized-item2-2">Expertises immobilières</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-800" data-translate-key="service-specialized-category3-title">Financier & Commercial :</h4>
+                                <ul class="list-disc list-inside text-gray-700 ml-5">
+                                    <li data-translate-key="service-specialized-item3-1">Rapports financiers, bilans, audits</li>
+                                    <li data-translate-key="service-specialized-item3-2">Brochures, sites web, présentations</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-800" data-translate-key="service-specialized-category4-title">RH & Autres :</h4>
+                                <ul class="list-disc list-inside text-gray-700 ml-5">
+                                    <li data-translate-key="service-specialized-item4-1">Contrats de travail, règlements intérieurs</li>
+                                    <li data-translate-key="service-specialized-item4-2">Descriptions de poste</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-6">
+                        <a href="contact.html" class="bg-indigo-700 text-white px-6 py-3 rounded-xl hover:bg-indigo-800 transition duration-300 shadow-md" data-translate-key="service-specialized-cta">
+                            <i class="fas fa-envelope mr-2"></i> Contactez-nous pour une consultation
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service Card: Interprétation à Bucarest -->
+                <div class="bg-gray-100 p-8 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 lg:col-span-2">
+                    <div class="text-5xl text-indigo-600 mb-6 text-center"><i class="fas fa-microphone-alt"></i></div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4 text-center" data-translate-key="service-interpreter-title">Interprétariat FR-RO : Votre Voix en Roumanie</h3>
+                    <p class="text-gray-600 mb-6 text-center" data-translate-key="service-interpreter-desc">Pour vos rendez-vous essentiels à Bucarest ou à distance, nous vous fournissons un interprète assermenté pour assurer une communication fluide et fidèle.</p>
+                    
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-800" data-translate-key="service-interpreter-category1-title">Types d'Interprétariat :</h4>
+                                <ul class="list-disc list-inside text-gray-700 ml-5">
+                                    <li data-translate-key="service-interpreter-item1-1">Consécutif (notariat, entretiens)</li>
+                                    <li data-translate-key="service-interpreter-item1-2">Simultané / Chuchotage (sur demande)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-800" data-translate-key="service-interpreter-category2-title">Domaines d'Intervention à Bucarest :</h4>
+                                <ul class="list-disc list-inside text-gray-700 ml-5">
+                                    <li data-translate-key="service-interpreter-item2-1">Mairies, Notaires, Préfectures</li>
+                                    <li data-translate-key="service-interpreter-item2-2">Entretiens professionnels, rendez-vous d'affaires</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-500 mt-4 text-center" data-translate-key="service-interpreter-consultation">Possibilité de consultations linguistiques et de visio-interprétation pour plus de flexibilité, selon la nature de votre démarche.</p>
+                    <div class="text-center mt-6">
+                        <a href="#interpreter-form" class="bg-indigo-700 text-white px-6 py-3 rounded-xl hover:bg-indigo-800 transition duration-300 shadow-md" data-translate-key="service-interpreter-cta">
+                            <i class="fas fa-calendar-check mr-2"></i> Réservez votre interprète à Bucarest
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get a Quote Section -->
+    <section id="quote-form" class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-4 max-w-2xl">
+            <h2 class="section-title text-center mx-auto mb-12" data-translate-key="quote-title">Obtenir un devis</h2>
+            <form class="bg-white p-8 rounded-2xl shadow-lg">
+                <div class="mb-6">
+                    <label for="translation-direction" class="block text-gray-700 text-sm font-bold mb-2" data-translate-key="quote-label-direction">Sens de la traduction :</label>
+                    <select id="translation-direction" name="translation-direction" class="shadow appearance-none border rounded-xl w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:border-transparent">
+                        <option value="" data-translate-key="quote-option-select-direction">Sélectionnez le sens</option>
+                        <option value="fr-ro" data-translate-key="quote-option-fr-ro">Français > Roumain</option>
+                        <option value="ro-fr" data-translate-key="quote-option-ro-fr">Roumain > Français</option>
+                    </select>
+                </div>
+
+                <div class="mb-6">
+                    <label for="document-type" class="block text-gray-700 text-sm font-bold mb-2" data-translate-key="quote-label-document-type">Type de document :</label>
+                    <input type="text" id="document-type" name="document-type" class="shadow appearance-none border rounded-xl w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:border-transparent" placeholder="Ex: Acte de naissance, Contrat" data-translate-key="quote-placeholder-document-type" data-translate-attr="placeholder">
+                </div>
+
+                <div class="mb-6">
+                    <label for="page-count" class="block text-gray-700 text-sm font-bold mb-2" data-translate-key="quote-label-page-count">Nombre de pages / documents :</label>
+                    <input type="number" id="page-count" name="page-count" min="1" class="shadow appearance-none border rounded-xl w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:border-transparent" placeholder="Ex: 3" data-translate-key="quote-placeholder-page-count" data-translate-attr="placeholder">
+                </div>
+
+                <div class="mb-6">
+                    <label for="delivery-date" class="block text-gray-700 text-sm font-bold mb-2" data-translate-key="quote-label-delivery-date">Date de livraison souhaitée :</label>
+                    <input type="date" id="delivery-date" name="delivery-date" class="shadow appearance-none border rounded-xl w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:border-transparent">
+                </div>
+
+                <div class="mb-6">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" data-translate-key="quote-label-need">Besoin :</label>
+                    <div class="flex items-center mb-2">
+                        <input type="radio" id="need-paper" name="need-type" value="paper" class="mr-2 text-indigo-700 focus:ring-indigo-600 rounded">
+                        <label for="need-paper" class="text-gray-700" data-translate-key="quote-radio-paper">Papier</label>
+                    </div>
+                    <div class="flex items-center">
+                        <input type="radio" id="need-digital" name="need-type" value="digital" class="mr-2 text-indigo-700 focus:ring-indigo-600 rounded">
+                        <label for="need-digital" class="text-gray-700" data-translate-key="quote-radio-digital">Numérique uniquement</label>
+                    </div>
+                </div>
+
+                <div class="mb-6" id="upload-document-quote">
+                    <label for="file-upload" class="block text-gray-700 text-sm font-bold mb-2" data-translate-key="quote-label-file-upload">Téléversement de fichiers :</label>
+                    <input type="file" id="file-upload" name="file-upload" multiple class="shadow appearance-none border rounded-xl w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:border-transparent">
+                    <p class="text-xs text-gray-500 mt-1" data-translate-key="quote-file-formats">Formats acceptés : PDF, photo (JPEG, PNG)</p>
+                </div>
+
+                <div class="mb-6">
+                    <label for="full-name" class="block text-gray-700 text-sm font-bold mb-2" data-translate-key="quote-label-full-name">Nom complet :</label>
+                    <input type="text" id="full-name" name="full-name" class="shadow appearance-none border rounded-xl w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:border-transparent" placeholder="Votre nom" data-translate-key="quote-placeholder-full-name" data-translate-attr="placeholder">
+                </div>
+
+                <div class="mb-6">
+                    <label for="email" class="block text-gray-700 text-sm font-bold mb-2" data-translate-key="quote-label-email">Adresse e-mail :</label>
+                    <input type="email" id="email" name="email" class="shadow appearance-none border rounded-xl w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:border-transparent" placeholder="votre.email@exemple.com" data-translate-key="quote-placeholder-email" data-translate-attr="placeholder">
+                </div>
+
+                <div class="mb-8">
+                    <label for="phone" class="block text-gray-700 text-sm font-bold mb-2" data-translate-key="quote-label-phone">Téléphone (facultatif) :</label>
+                    <input type="tel" id="phone" name="phone" class="shadow appearance-none border rounded-xl w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:border-transparent" placeholder="Votre numéro de téléphone" data-translate-key="quote-placeholder-phone" data-translate-attr="placeholder">
+                </div>
+
+                <button type="submit" class="bg-indigo-700 hover:bg-indigo-800 text-white font-bold py-3 px-6 rounded-xl w-full transition duration-300 shadow-md transform hover:scale-105" data-translate-key="quote-submit-button">
+                    <i class="fas fa-paper-plane mr-2"></i> Recevoir un devis maintenant
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Book an Interpreter Section -->
+    <section id="interpreter-form" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 max-w-2xl">
+            <h2 class="section-title text-center mx-auto mb-12" data-translate-key="interpreter-title">Réserver un interprète à Bucarest</h2>
+            <form class="bg-gray-50 p-8 rounded-2xl shadow-lg">
+                <div class="mb-6">
+                    <label for="meeting-location" class="block text-gray-700 text-sm font-bold mb-2" data-translate-key="interpreter-label-location">Lieu du RDV :</label>
+                    <input type="text" id="meeting-location" name="meeting-location" class="shadow appearance-none border rounded-xl w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:border-transparent" placeholder="Ex: Mairie, Notaire, Autre" data-translate-key="interpreter-placeholder-location" data-translate-attr="placeholder">
+                </div>
+
+                <div class="mb-6">
+                    <label for="meeting-date" class="block text-gray-700 text-sm font-bold mb-2" data-translate-key="interpreter-label-date">Date souhaitée :</label>
+                    <input type="date" id="meeting-date" name="meeting-date" class="shadow appearance-none border rounded-xl w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:border-transparent">
+                </div>
+
+                <div class="mb-6">
+                    <label for="meeting-time" class="block text-gray-700 text-sm font-bold mb-2" data-translate-key="interpreter-label-time">Heure souhaitée :</label>
+                    <input type="time" id="meeting-time" name="meeting-time" class="shadow appearance-none border rounded-xl w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:border-transparent">
+                </div>
+
+                <div class="mb-6">
+                    <label for="procedure-type" class="block text-gray-700 text-sm font-bold mb-2" data-translate-key="interpreter-label-procedure">Type de démarche :</label>
+                    <input type="text" id="procedure-type" name="procedure-type" class="shadow appearance-none border rounded-xl w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:border-transparent" placeholder="Ex: Mariage civil, Signature notariale" data-translate-key="interpreter-placeholder-procedure" data-translate-attr="placeholder">
+                </div>
+
+                <div class="mb-6">
+                    <label for="spoken-language" class="block text-gray-700 text-sm font-bold mb-2" data-translate-key="interpreter-label-spoken-language">Langue parlée :</label>
+                    <select id="spoken-language" name="spoken-language" class="shadow appearance-none border rounded-xl w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:border-transparent">
+                        <option value="" data-translate-key="interpreter-option-select-language">Sélectionnez la langue</option>
+                        <option value="fr" data-translate-key="interpreter-option-fr">Français</option>
+                        <option value="ro" data-translate-key="interpreter-option-ro">Roumain</option>
+                        <option value="both" data-translate-key="interpreter-option-both">Les deux</option>
+                    </select>
+                </div>
+
+                <div class="mb-8">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" data-translate-key="interpreter-label-visio">Option visio :</label>
+                    <div class="flex items-center mb-2">
+                        <input type="radio" id="visio-yes" name="visio-option" value="yes" class="mr-2 text-indigo-700 focus:ring-indigo-600 rounded">
+                        <label for="visio-yes" class="text-gray-700" data-translate-key="interpreter-radio-visio-yes">Oui</label>
+                    </div>
+                    <div class="flex items-center">
+                        <input type="radio" id="visio-no" name="visio-option" value="no" class="mr-2 text-indigo-700 focus:ring-indigo-600 rounded">
+                        <label for="visio-no" class="text-gray-700" data-translate-key="interpreter-radio-visio-no">Non</label>
+                    </div>
+                </div>
+
+                <button type="submit" class="bg-indigo-700 hover:bg-indigo-800 text-white font-bold py-3 px-6 rounded-xl w-full transition duration-300 shadow-md transform hover:scale-105" data-translate-key="interpreter-submit-button">
+                    <i class="fas fa-calendar-check mr-2"></i> Confirmer la réservation
+                </button>
+            </form>
+            <p class="text-center text-gray-700 mt-6" data-translate-key="interpreter-confirmation">Nous vous confirmons sous 24h.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12 rounded-t-3xl">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-8 space-y-4 md:space-y-0">
+                <div class="text-xl font-bold text-indigo-400" data-translate-key="footer-brand">FR | RO Traduction</div>
+                <ul class="flex space-x-6">
+                    <li><a href="index.html" class="text-gray-300 hover:text-white transition duration-300" data-translate-key="nav-home">Accueil</a></li>
+                    <li><a href="services.html" class="text-gray-300 hover:text-white transition duration-300" data-translate-key="nav-services">Services</a></li>
+                    <li><a href="services.html#quote-form" class="text-gray-300 hover:text-white transition duration-300" data-translate-key="nav-quote">Devis</a></li>
+                    <li><a href="services.html#interpreter-form" class="text-gray-300 hover:text-white transition duration-300" data-translate-key="nav-interpretation">Interprétation</a></li>
+                    <li><a href="contact.html" class="text-gray-300 hover:text-white transition duration-300" data-translate-key="nav-contact">Contact</a></li>
+                    <li><a href="mentions-legales.html" class="text-gray-300 hover:text-white font-medium transition duration-300" data-translate-key="nav-legal">Mentions Légales</a></li>
+                    <li><a href="cgv-cgu.html" class="text-gray-300 hover:text-white font-medium transition duration-300" data-translate-key="nav-cgv-cgu">CGV/CGU</a></li>
+                </ul>
+            </div>
+            <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400 space-y-4 md:space-y-0">
+                <div class="flex space-x-4">
+                    <a href="#" class="hover:text-white transition duration-300" data-translate-key="footer-legal-mentions">Mentions légales</a>
+                    <a href="#" class="hover:text-white transition duration-300" data-translate-key="footer-cgv-cgu">CGV/CGU</a>
+                </div>
+                <div data-translate-key="footer-secure-payment">
+                    Paiement sécurisé : <i class="fab fa-stripe mr-2"></i>Stripe <i class="fab fa-paypal ml-4 mr-2"></i>PayPal
+                </div>
+                <div data-translate-key="footer-certification">
+                    Certification : Cristina Vlad + n° d'assermentation [XXXX/20XX]
+                </div>
+                 <!-- Language Switcher in Footer -->
+                <div class="ml-4">
+                    <label for="site-language-footer" class="sr-only" data-translate-key="contact-label-site-language">Langue du site :</label>
+                    <select id="site-language-footer" name="site-language" class="bg-gray-700 text-white rounded-lg px-3 py-1 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-600">
+                        <option value="fr" data-translate-key="contact-option-fr">Français</option>
+                        <option value="ro">Română</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links and cross-page navigation
+        document.querySelectorAll('a[href]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href.startsWith('#')) {
+                    // Internal anchor link on the same page
+                    e.preventDefault();
+                    const targetId = href.substring(1);
+                    document.getElementById(targetId).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                } else if (href.includes('.html#')) {
+                    // Link to an anchor on another HTML page
+                    // Let default behavior handle navigation, then scroll
+                    // No need to preventDefault for cross-page anchors, browser handles it post-load
+                }
+            });
+        });
+
+        // Language translation logic
+        const translations = {
+            fr: {
+                // Header & Navigation
+                'page-title': 'Services - Agence de Traduction FR RO',
+                'brand-name': 'FR | RO Traduction',
+                'nav-home': 'Accueil',
+                'nav-services': 'Services',
+                'nav-about': 'À propos',
+                'nav-contact': 'Contact',
+                'nav-quote': 'Devis',
+                'nav-interpretation': 'Interprétation',
+
+                // Services Section
+                'services-main-title': 'Nos Services de Traduction & Interprétation',
+                'services-intro': 'Nous offrons une gamme complète de services linguistiques pour répondre à vos besoins spécifiques entre le français et le roumain, avec rigueur et confidentialité.',
+                'service-sworn-title': 'Traduction Assermentée FR-RO : Validité Officielle Garantie',
+                'service-sworn-desc': 'Nos traducteurs-interprètes assermentés, accrédités près la Cour d\'Appel de Bucarest, réalisent des traductions officielles reconnues par les administrations françaises et roumaines.',
+                'service-sworn-category1-title': 'Documents d\'État Civil :',
+                'service-sworn-item1-1': 'Actes de naissance, mariage, divorce, décès',
+                'service-sworn-item1-2': 'Livret de famille',
+                'service-sworn-category2-title': 'Diplômes & Scolarité :',
+                'service-sworn-item2-1': 'Diplômes universitaires, relevés de notes',
+                'service-sworn-item2-2': 'Certificats de scolarité, programmes d\'études',
+                'service-sworn-category3-title': 'Documents Juridiques :',
+                'service-sworn-item3-1': 'Jugements, procurations, contrats',
+                'service-sworn-item3-2': 'Statuts d\'entreprise, Kbis, casiers judiciaires',
+                'service-sworn-category4-title': 'Documents Administratifs & Autres :',
+                'service-sworn-item4-1': 'Attestations, permis de conduire, pièces d\'identité',
+                'service-sworn-item4-2': 'Testaments, rapports médicaux (officiels)',
+                'service-sworn-delivery': 'Envoi du document traduit par e-mail (PDF signé) ou par courrier si demandé.',
+                'service-sworn-cta': 'Demandez votre devis gratuit',
+
+                'service-specialized-title': 'Traduction Spécialisée : Précision Terminologique pour Vos Domaines Clés',
+                'service-specialized-desc': 'Au-delà de l\'assermentation, nous maîtrisons les terminologies spécifiques pour vos documents techniques et professionnels, garantissant une compréhension exacte et une fidélité impeccable.',
+                'service-specialized-category1-title': 'Juridique :',
+                'service-specialized-item1-1': 'Contrats complexes, accords commerciaux',
+                'service-specialized-item1-2': 'Décisions de justice, législations',
+                'service-specialized-category2-title': 'Administratif & Immobilier :',
+                'service-specialized-item2-1': 'Dossiers d\'immigration, documents fonciers',
+                'service-specialized-item2-2': 'Expertises immobilières',
+                'service-specialized-category3-title': 'Financier & Commercial :',
+                'service-specialized-item3-1': 'Rapports financiers, bilans, audits',
+                'service-specialized-item3-2': 'Brochures, sites web, présentations',
+                'service-specialized-category4-title': 'RH & Autres :',
+                'service-specialized-item4-1': 'Contrats de travail, règlements intérieurs',
+                'service-specialized-item4-2': 'Descriptions de poste',
+                'service-specialized-cta': 'Contactez-nous pour une consultation',
+
+                'service-interpreter-title': 'Interprétariat FR-RO : Votre Voix en Roumanie',
+                'service-interpreter-desc': 'Pour vos rendez-vous essentiels à Bucarest ou à distance, nous vous fournissons un interprète assermenté pour assurer une communication fluide et fidèle.',
+                'service-interpreter-category1-title': 'Types d\'Interprétariat :',
+                'service-interpreter-item1-1': 'Consécutif (notariat, entretiens)',
+                'service-interpreter-item1-2': 'Simultané / Chuchotage (sur demande)',
+                'service-interpreter-category2-title': 'Domaines d\'Intervention à Bucarest :',
+                'service-interpreter-item2-1': 'Mairies, Notaires, Préfectures',
+                'service-interpreter-item2-2': 'Entretiens professionnels, rendez-vous d\'affaires',
+                'service-interpreter-consultation': 'Possibilité de consultations linguistiques et de visio-interprétation pour plus de flexibilité, selon la nature de votre démarche.',
+                'service-interpreter-cta': 'Réservez votre interprète à Bucarest',
+
+                // Quote Section
+                'quote-title': 'Obtenir un devis',
+                'quote-label-direction': 'Sens de la traduction :',
+                'quote-option-select-direction': 'Sélectionnez le sens',
+                'quote-option-fr-ro': 'Français > Roumain',
+                'quote-option-ro-fr': 'Roumain > Français',
+                'quote-label-document-type': 'Type de document :',
+                'quote-placeholder-document-type': 'Ex: Acte de naissance, Contrat',
+                'quote-label-page-count': 'Nombre de pages / documents :',
+                'quote-placeholder-page-count': 'Ex: 3',
+                'quote-label-delivery-date': 'Date de livraison souhaitée :',
+                'quote-label-need': 'Besoin :',
+                'quote-radio-paper': 'Papier',
+                'quote-radio-digital': 'Numérique uniquement',
+                'quote-label-file-upload': 'Téléversement de fichiers :',
+                'quote-file-formats': 'Formats acceptés : PDF, photo (JPEG, PNG)',
+                'quote-label-full-name': 'Nom complet :',
+                'quote-placeholder-full-name': 'Votre nom',
+                'quote-label-email': 'Adresse e-mail :',
+                'quote-placeholder-email': 'votre.email@exemple.com',
+                'quote-label-phone': 'Téléphone (facultatif) :',
+                'quote-placeholder-phone': 'Votre numéro de téléphone',
+                'quote-submit-button': 'Recevoir un devis maintenant',
+
+                // Book an Interpreter Section
+                'interpreter-title': 'Réserver un interprète à Bucarest',
+                'interpreter-label-location': 'Lieu du RDV :',
+                'interpreter-placeholder-location': 'Ex: Mairie, Notaire, Autre',
+                'interpreter-label-date': 'Date souhaitée :',
+                'interpreter-label-time': 'Heure souhaitée :',
+                'interpreter-label-procedure': 'Type de démarche :',
+                'interpreter-placeholder-procedure': 'Ex: Mariage civil, Signature notariale',
+                'interpreter-label-spoken-language': 'Langue parlée :',
+                'interpreter-option-select-language': 'Sélectionnez la langue',
+                'interpreter-option-fr': 'Français',
+                'interpreter-option-ro': 'Roumain',
+                'interpreter-option-both': 'Les deux',
+                'interpreter-label-visio': 'Option visio :',
+                'interpreter-radio-visio-yes': 'Oui',
+                'interpreter-radio-visio-no': 'Non',
+                'interpreter-submit-button': 'Confirmer la réservation',
+                'interpreter-confirmation': 'Nous vous confirmons sous 24h.',
+
+                // Footer
+                'footer-brand': 'FR | RO Traduction',
+                'footer-legal-mentions': 'Mentions légales',
+                'footer-cgv-cgu': 'CGV/CGU',
+                'footer-secure-payment': 'Paiement sécurisé :',
+                'footer-certification': 'Certification : Cristina Vlad + n° d\'assermentation [XXXX/20XX]',
+                'contact-label-site-language': 'Langue du site :',
+                'contact-option-fr': 'Français',
+                'contact-option-ro': 'Română',
+            },
+            ro: {
+                // Header & Navigation
+                'page-title': 'Servicii - Agenție de Traduceri FR RO',
+                'brand-name': 'FR | RO Traducere',
+                'nav-home': 'Acasă',
+                'nav-services': 'Servicii',
+                'nav-about': 'Despre Noi',
+                'nav-contact': 'Contact',
+                'nav-quote': 'Ofertă',
+                'nav-interpretation': 'Interpretare',
+
+                // Services Section
+                'services-main-title': 'Serviciile Noastre de Traducere & Interpretare',
+                'services-intro': 'Oferim o gamă completă de servicii lingvistice pentru a răspunde nevoilor dumneavoastră specifice între franceză și română, cu rigoare și confidențialitate.',
+                'service-sworn-title': 'Traducere Autorizată FR-RO : Valabilitate Oficială Garantată',
+                'service-sworn-desc': 'Traducătorii-interpreții noștri autorizați, acreditați pe lângă Curtea de Apel București, realizează traduceri oficiale recunoscute de administrațiile franceze și române.',
+                'service-sworn-category1-title': 'Documente de Stare Civilă :',
+                'service-sworn-item1-1': 'Acte de naștere, căsătorie, divorț, deces',
+                'service-sworn-item1-2': 'Livret de familie',
+                'service-sworn-category2-title': 'Diplome & Școlarizare :',
+                'service-sworn-item2-1': 'Diplome universitare, foi matricole',
+                'service-sworn-item2-2': 'Certificate de școlaritate, programe de studiu',
+                'service-sworn-category3-title': 'Documente Juridice :',
+                'service-sworn-item3-1': 'Hotărâri judecătorești, procuri, contracte',
+                'service-sworn-item3-2': 'Statute de firmă, CUI, caziere judiciare',
+                'service-sworn-category4-title': 'Documente Administrative & Altele :',
+                'service-sworn-item4-1': 'Adeverințe, permise de conducere, acte de identitate',
+                'service-sworn-item4-2': 'Testamente, rapoarte medicale (oficiale)',
+                'service-sworn-delivery': 'Trimiterea documentului tradus prin e-mail (PDF semnat) sau prin poștă, dacă se solicită.',
+                'service-sworn-cta': 'Cereți oferta gratuită',
+
+                'service-specialized-title': 'Traducere Specializată : Precizie Terminologică pentru Domeniile Voastre Cheie',
+                'service-specialized-desc': 'Pe lângă autorizare, stăpânim terminologiile specifice pentru documentele dumneavoastră tehnice și profesionale, garantând o înțelegere exactă și o fidelitate impecabilă.',
+                'service-specialized-category1-title': 'Juridic :',
+                'service-specialized-item1-1': 'Contracte complexe, acorduri comerciale',
+                'service-specialized-item1-2': 'Decizii judecătorești, legislație',
+                'service-specialized-category2-title': 'Administrativ & Imobiliar :',
+                'service-specialized-item2-1': 'Dosare de imigrare, documente funciare',
+                'service-specialized-item2-2': 'Expertize imobiliare',
+                'service-specialized-category3-title': 'Financiar & Comercial :',
+                'service-specialized-item3-1': 'Rapoarte financiare, bilanțuri, audituri',
+                'service-specialized-item3-2': 'Broșuri, site-uri web, prezentări',
+                'service-specialized-category4-title': 'Resurse Umane & Altele :',
+                'service-specialized-item4-1': 'Contracte de muncă, regulamente interne',
+                'service-specialized-item4-2': 'Descrieri de posturi',
+                'service-specialized-cta': 'Contactați-ne pentru o consultație',
+
+                'service-interpreter-title': 'Interpretare FR-RO : Vocea Dumneavoastră în România',
+                'service-interpreter-desc': 'Pentru programările dumneavoastră esențiale în București sau la distanță, vă punem la dispoziție un interpret autorizat pentru a asigura o comunicare fluidă și fidelă.',
+                'service-interpreter-category1-title': 'Tipuri de Interpretare :',
+                'service-interpreter-item1-1': 'Consecutivă (notariat, interviuri)',
+                'service-interpreter-item1-2': 'Simultană / Șoaptă (la cerere)',
+                'service-interpreter-category2-title': 'Domenii de Intervenție în București :',
+                'service-interpreter-item2-1': 'Primării, Notariate, Prefecturi',
+                'service-interpreter-item2-2': 'Întâlniri profesionale, întâlniri de afaceri',
+                'service-interpreter-consultation': 'Posibilitate de consultații lingvistice și de video-interpretare pentru mai multă flexibilitate, în funcție de natura demersului dumneavoastră.',
+                'service-interpreter-cta': 'Rezervați-vă interpretul în București',
+
+                // Quote Section
+                'quote-title': 'Obține o ofertă',
+                'quote-label-direction': 'Sensul traducerii :',
+                'quote-option-select-direction': 'Selectați sensul',
+                'quote-option-fr-ro': 'Franceză > Română',
+                'quote-option-ro-fr': 'Română > Franceză',
+                'quote-label-document-type': 'Tipul documentului :',
+                'quote-placeholder-document-type': 'Ex: Certificat de naștere, Contract',
+                'quote-label-page-count': 'Număr de pagini / documente :',
+                'quote-placeholder-page-count': 'Ex: 3',
+                'quote-label-delivery-date': 'Data dorită de livrare :',
+                'quote-label-need': 'Necesitate :',
+                'quote-radio-paper': 'Pe hârtie',
+                'quote-radio-digital': 'Doar digital',
+                'quote-label-file-upload': 'Încărcare fișiere :',
+                'quote-file-formats': 'Formate acceptate : PDF, foto (JPEG, PNG)',
+                'quote-label-full-name': 'Nume complet :',
+                'quote-placeholder-full-name': 'Numele dumneavoastră',
+                'quote-label-email': 'Adresă de e-mail :',
+                'quote-placeholder-email': 'adresa.dumneavoastra@exemplu.com',
+                'quote-label-phone': 'Telefon (opțional) :',
+                'quote-placeholder-phone': 'Numărul dumneavoastră de telefon',
+                'quote-submit-button': 'Primește oferta acum',
+
+                // Book an Interpreter Section
+                'interpreter-title': 'Rezervă un interpret în București',
+                'interpreter-label-location': 'Locul întâlnirii :',
+                'interpreter-placeholder-location': 'Ex: Primărie, Notariat, Altul',
+                'interpreter-label-date': 'Data dorită :',
+                'interpreter-label-time': 'Ora dorită :',
+                'interpreter-label-procedure': 'Tipul demersului :',
+                'interpreter-placeholder-procedure': 'Ex: Căsătorie civilă, Semnătură notarială',
+                'interpreter-label-spoken-language': 'Limba vorbită :',
+                'interpreter-option-select-language': 'Selectați limba',
+                'interpreter-option-fr': 'Franceză',
+                'interpreter-option-ro': 'Română',
+                'interpreter-option-both': 'Ambele',
+                'interpreter-label-visio': 'Opțiune video :',
+                'interpreter-radio-visio-yes': 'Da',
+                'interpreter-radio-visio-no': 'Nu',
+                'interpreter-submit-button': 'Confirmă rezervarea',
+                'interpreter-confirmation': 'Vă confirmăm în 24 de ore.',
+
+                // Footer
+                'footer-brand': 'FR | RO Traducere',
+                'footer-legal-mentions': 'Mențiuni legale',
+                'footer-cgv-cgu': 'Termeni și Condiții',
+                'footer-secure-payment': 'Plată securizată :',
+                'footer-certification': 'Certificare : Cristina Vlad + nr. autorizație [XXXX/20XX]',
+                'contact-label-site-language': 'Limba site-ului :',
+                'contact-option-fr': 'Franceză',
+                'contact-option-ro': 'Română',
+            }
+        };
+
+        function setLanguage(lang) {
+            document.documentElement.lang = lang; // Set HTML lang attribute
+            document.getElementById('page-title').textContent = translations[lang]['page-title'];
+
+            document.querySelectorAll('[data-translate-key]').forEach(element => {
+                const key = element.getAttribute('data-translate-key');
+                const attrToTranslate = element.getAttribute('data-translate-attr');
+
+                if (translations[lang] && translations[lang][key]) {
+                    if (attrToTranslate) {
+                        // For attributes like placeholder
+                        element.setAttribute(attrToTranslate, translations[lang][key]);
+                    } else {
+                        // For text content, preserve HTML if present (like in footer-certification)
+                        if (key.includes('footer-certification')) {
+                            element.innerHTML = translations[lang][key];
+                        } else {
+                            element.textContent = translations[lang][key];
+                        }
+                    }
+                }
+            });
+
+            // Update language switcher in header if changed from footer or vice-versa
+            const langSwitcherHeader = document.getElementById('language-switcher');
+            const langSwitcherFooter = document.getElementById('site-language-footer');
+            if (langSwitcherHeader && langSwitcherHeader.value !== lang) {
+                langSwitcherHeader.value = lang;
+            }
+            if (langSwitcherFooter && langSwitcherFooter.value !== lang) {
+                langSwitcherFooter.value = lang;
+            }
+        }
+
+        // Initialize language on page load based on saved preference or default to French
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('siteLanguage') || 'fr';
+            setLanguage(savedLang);
+        });
+
+        // Event listener for header language switcher
+        document.getElementById('language-switcher').addEventListener('change', (event) => {
+            const newLang = event.target.value;
+            localStorage.setItem('siteLanguage', newLang); // Save preference
+            setLanguage(newLang);
+        });
+
+        // Event listener for footer language switcher
+        document.getElementById('site-language-footer').addEventListener('change', (event) => {
+            const newLang = event.target.value;
+            localStorage.setItem('siteLanguage', newLang); // Save preference
+            setLanguage(newLang);
+        });
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Accueil - Agence de Traduction FR RO</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2rem;
+            font-size: 2.25rem; /* text-4xl */
+            font-weight: 700; /* font-bold */
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            width: 60%;
+            height: 4px;
+            background-color: #4F46E5; /* indigo-600 */
+            border-radius: 9999px; /* rounded-full */
+        }
+        /* Styles for testimonial carousel */
+        .testimonial-carousel {
+            display: flex;
+            overflow-x: scroll;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none;  /* IE and Edge */
+        }
+        .testimonial-carousel::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, Opera */
+        }
+        .testimonial-card {
+            flex: 0 0 auto;
+            width: 90%; /* Adjust as needed for mobile view */
+            scroll-snap-align: start;
+        }
+        @media (min-width: 768px) {
+            .testimonial-card {
+                width: 31%; /* Three cards per view on desktop, with gap */
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-sm py-4 sticky top-0 z-50">
+        <nav class="container mx-auto px-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-indigo-700" data-translate-key="brand-name">FR | RO Traduction</div>
+            <ul class="flex space-x-6 items-center">
+                <li><a href="index.html" class="text-gray-700 hover:text-indigo-700 font-medium transition duration-300" data-translate-key="nav-home">Accueil</a></li>
+                <li><a href="services.html" class="text-gray-700 hover:text-indigo-700 font-medium transition duration-300" data-translate-key="nav-services">Services</a></li>
+                <li><a href="about.html" class="text-gray-700 hover:text-indigo-700 font-medium transition duration-300" data-translate-key="nav-about">À propos</a></li>
+                <li><a href="contact.html" class="text-gray-700 hover:text-indigo-700 font-medium transition duration-300" data-translate-key="nav-contact">Contact</a></li>
+                <!-- Mentions Légales and CGV/CGU links removed from header as per request -->
+                <li><a href="services.html#quote-form" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition duration-300 shadow-md" data-translate-key="nav-quote">Devis</a></li>
+                <!-- Language Switcher -->
+                <li class="ml-4">
+                    <select id="language-switcher" class="bg-gray-100 text-gray-800 rounded-lg px-3 py-1 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-600">
+                        <option value="fr">Français</option>
+                        <option value="ro">Română</option>
+                    </select>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="bg-gradient-to-r from-indigo-700 to-indigo-900 text-white py-20 md:py-32 rounded-b-3xl shadow-xl">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4 animate-fade-in-down" data-translate-key="home-main-title">Votre Pont Linguistique entre la France et la Roumanie</h1>
+            <p class="text-lg md:text-xl mb-8 opacity-90 animate-fade-in-up" data-translate-key="home-tagline">Des traductions certifiées et un accompagnement personnalisé pour toutes vos démarches.</p>
+            
+            <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6 mt-12">
+                <a href="services.html#quote-form" class="bg-white text-indigo-700 font-semibold px-8 py-4 rounded-xl shadow-lg hover:bg-gray-100 transition duration-300 transform hover:scale-105" data-translate-key="home-cta-quote">
+                    <i class="fas fa-file-invoice-dollar mr-2"></i> Obtenez votre devis rapide
+                </a>
+                <a href="services.html" class="border border-white text-white font-semibold px-8 py-4 rounded-xl shadow-lg hover:bg-white hover:text-indigo-700 transition duration-300 transform hover:scale-105" data-translate-key="home-cta-discover-services">
+                    <i class="fas fa-arrow-right mr-2"></i> Découvrez nos services
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Overview / Value Proposition Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="section-title mx-auto mb-12" data-translate-key="home-value-prop-title">Pourquoi choisir FR | RO Traduction ?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div class="flex flex-col items-center p-6 bg-gray-100 rounded-xl shadow-md">
+                    <i class="fas fa-handshake text-5xl text-indigo-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2" data-translate-key="home-value-prop-1-title">Confiance & Expertise</h3>
+                    <p class="text-gray-600" data-translate-key="home-value-prop-1-desc">Profitez d'une expertise reconnue et d'un accompagnement personnalisé.</p>
+                </div>
+                <div class="flex flex-col items-center p-6 bg-gray-100 rounded-xl shadow-md">
+                    <i class="fas fa-shield-alt text-5xl text-indigo-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2" data-translate-key="home-value-prop-2-title">Fiabilité & Certification</h3>
+                    <p class="text-gray-600" data-translate-key="home-value-prop-2-desc">Vos documents sont entre les mains d'une traductrice assermentée, garantissant leur validité.</p>
+                </div>
+                <div class="flex flex-col items-center p-6 bg-gray-100 rounded-xl shadow-md">
+                    <i class="fas fa-bolt text-5xl text-indigo-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2" data-translate-key="home-value-prop-3-title">Rapidité & Simplicité</h3>
+                    <p class="text-gray-600" data-translate-key="home-value-prop-3-desc">Un processus 100% digital pour des délais de livraison optimisés.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section (Concise for Home Page) -->
+    <section class="py-16 md:py-24 bg-gray-50">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="section-title mx-auto mb-12" data-translate-key="home-how-it-works-title">Un service rapide, 100% digital, en 4 étapes.</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Step 1 -->
+                <div class="flex flex-col items-center p-6 bg-white rounded-2xl shadow-lg transition duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-indigo-100 text-indigo-700 flex items-center justify-center rounded-full text-3xl font-bold mb-4 border-2 border-indigo-300">1</div>
+                    <i class="fas fa-cloud-upload-alt text-5xl text-indigo-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2" data-translate-key="how-it-works-step1-title">Téléversement du document</h3>
+                    <p class="text-gray-600" data-translate-key="how-it-works-step1-desc">Vous téléversez votre document (scan/photo propre).</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="flex flex-col items-center p-6 bg-white rounded-2xl shadow-lg transition duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-indigo-100 text-indigo-700 flex items-center justify-center rounded-full text-3xl font-bold mb-4 border-2 border-indigo-300">2</div>
+                    <i class="fas fa-receipt text-5xl text-indigo-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2" data-translate-key="how-it-works-step2-title">Réception du devis</h3>
+                    <p class="text-gray-600" data-translate-key="how-it-works-step2-desc">Nous vous envoyons un devis sous 24h.</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="flex flex-col items-center p-6 bg-white rounded-2xl shadow-lg transition duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-indigo-100 text-indigo-700 flex items-center justify-center rounded-full text-3xl font-bold mb-4 border-2 border-indigo-300">3</div>
+                    <i class="fas fa-credit-card text-5xl text-indigo-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2" data-translate-key="how-it-works-step3-title">Paiement en ligne</h3>
+                    <p class="text-gray-600" data-translate-key="how-it-works-step3-desc">Vous payez en ligne (CB, PayPal, virement).</p>
+                </div>
+                <!-- Step 4 -->
+                <div class="flex flex-col items-center p-6 bg-white rounded-2xl shadow-lg transition duration-300 transform hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-indigo-100 text-indigo-700 flex items-center justify-center rounded-full text-3xl font-bold mb-4 border-2 border-indigo-300">4</div>
+                    <i class="fas fa-envelope-open-text text-5xl text-indigo-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-2" data-translate-key="how-it-works-step4-title">Réception de la traduction</h3>
+                    <p class="text-gray-600" data-translate-key="how-it-works-step4-desc">Vous recevez la traduction par e-mail ou courrier.</p>
+                </div>
+            </div>
+            <p class="text-lg text-gray-700 mt-12" data-translate-key="how-it-works-delivery-times">Délais standard: <span class="font-semibold text-indigo-700" data-translate-key="how-it-works-delivery-standard">2 à 4 jours ouvrés</span>. Option express disponible sous <span class="font-semibold text-indigo-700" data-translate-key="how-it-works-delivery-express">24-48h</span>.</p>
+        </div>
+    </section>
+
+    <!-- Who We Help Section (Concise for Home Page) -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="section-title mx-auto mb-12" data-translate-key="home-who-we-help-title">À qui s'adresse notre service ?</h2>
+            <h3 class="text-3xl font-bold text-gray-800 mb-12" data-translate-key="home-who-we-help-subtitle">Un pont entre la France et la Roumanie.</h3>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="flex flex-col items-center p-6 bg-gray-100 rounded-2xl shadow-lg">
+                    <i class="fas fa-user-friends text-5xl text-indigo-600 mb-4"></i>
+                    <p class="text-lg font-medium text-gray-700" data-translate-key="home-who-we-help-item1">Les Roumains vivant en France (études, travail, regroupement familial)</p>
+                </div>
+                <div class="flex flex-col items-center p-6 bg-gray-100 rounded-2xl shadow-lg">
+                    <i class="fas fa-building text-5xl text-indigo-600 mb-4"></i>
+                    <p class="text-lg font-medium text-gray-700" data-translate-key="home-who-we-help-item2">Les Français installés ou investisseurs en Roumanie</p>
+                </div>
+                <div class="flex flex-col items-center p-6 bg-gray-100 rounded-2xl shadow-lg">
+                    <i class="fas fa-heart text-5xl text-indigo-600 mb-4"></i>
+                    <p class="text-lg font-medium text-gray-700" data-translate-key="home-who-we-help-item3">Les couples binationaux et familles franco-roumaines</p>
+                </div>
+                <div class="flex flex-col items-center p-6 bg-gray-100 rounded-2xl shadow-lg">
+                    <i class="fas fa-handshake text-5xl text-indigo-600 mb-4"></i>
+                    <p class="text-lg font-medium text-gray-700" data-translate-key="home-who-we-help-item4">Les entreprises & PMEs (développement international, conformité)</p>
+                </div>
+            </div>
+            <p class="text-xl text-gray-700 italic mt-12" data-translate-key="home-who-we-help-confidentiality">Chaque dossier est traité de façon confidentielle, rapide et personnalisée.</p>
+        </div>
+    </section>
+
+    <!-- Social Proof / Testimonials Section - Carousel -->
+    <section id="testimonials" class="py-16 md:py-24 bg-indigo-50">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="section-title mx-auto mb-12" data-translate-key="testimonials-title">Ce que nos clients disent de nous</h2>
+            <div class="relative">
+                <div class="testimonial-carousel space-x-8 pb-4" id="testimonial-carousel">
+                    <!-- Testimonial 1 (French) -->
+                    <div class="testimonial-card bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <i class="fas fa-quote-left text-indigo-400 text-3xl mb-4"></i>
+                        <p class="text-gray-700 italic mb-6" data-translate-key="testimonial-1-text">
+                            « Grâce à Cristina, j'ai pu faire traduire mon acte de mariage sans aucune difficulté pour mon dossier de naturalisation en France. Rapidité et professionnalisme, je recommande les yeux fermés ! »
+                        </p>
+                        <p class="font-semibold text-gray-800" data-translate-key="testimonial-1-author">- Marie Dubois, Particulière, Paris</p>
+                    </div>
+                    <!-- Testimonial 2 (Romanian) -->
+                    <div class="testimonial-card bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <i class="fas fa-quote-left text-indigo-400 text-3xl mb-4"></i>
+                        <p class="text-gray-700 italic mb-6" data-translate-key="testimonial-2-text">
+                            « Traducerea statutului firmei noastre de către Cristina a fost de o precizie exemplară. Expertiza sa juridică este un atu major pentru investițiile noastre în România. »
+                        </p>
+                        <p class="font-semibold text-gray-800" data-translate-key="testimonial-2-author">- Ion Popescu, Antreprenor, București</p>
+                    </div>
+                    <!-- Testimonial 3 (French) -->
+                    <div class="testimonial-card bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <i class="fas fa-quote-left text-indigo-400 text-3xl mb-4"></i>
+                        <p class="text-gray-700 italic mb-6" data-translate-key="testimonial-3-text">
+                            « L'interprétariat lors de mon rendez-vous chez le notaire à Bucarest a été d'une aide précieuse. Cristina a su clarifier tous les points complexes avec une grande pédagogie. Un service irréprochable. »
+                        </p>
+                        <p class="font-semibold text-gray-800" data-translate-key="testimonial-3-author">- Sophie Martin, Expatriée, Bucarest</p>
+                    </div>
+                     <!-- Testimonial 4 (Romanian) -->
+                    <div class="testimonial-card bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <i class="fas fa-quote-left text-indigo-400 text-3xl mb-4"></i>
+                        <p class="text-gray-700 italic mb-6" data-translate-key="testimonial-4-text">
+                            « Am avut nevoie urgent de o traducere pentru o licitație și Cristina a livrat impecabil în termen. Profesionalism și eficiență la superlativ! »
+                        </p>
+                        <p class="font-semibold text-gray-800" data-translate-key="testimonial-4-author">- Elena Tudor, Manager Proiect, Cluj-Napoca</p>
+                    </div>
+                    <!-- Testimonial 5 (French) -->
+                    <div class="testimonial-card bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <i class="fas fa-quote-left text-indigo-400 text-3xl mb-4"></i>
+                        <p class="text-gray-700 italic mb-6" data-translate-key="testimonial-5-text">
+                            « Pour notre mariage binational, les traductions de Cristina ont été parfaites et acceptées sans problème. Un service humain et rassurant. »
+                        </p>
+                        <p class="font-semibold text-gray-800" data-translate-key="testimonial-5-author">- Marc & Andreea, Couple, Nice</p>
+                    </div>
+                    <!-- Testimonial 6 (Romanian) -->
+                    <div class="testimonial-card bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <i class="fas fa-quote-left text-indigo-400 text-3xl mb-4"></i>
+                        <p class="text-gray-700 italic mb-6" data-translate-key="testimonial-6-text">
+                            « Fiind studentă în Franța, am avut nevoie de traducerea diplomei. Cristina a fost foarte rapidă și documentul a fost validat imediat. Mulțumesc mult! »
+                        </p>
+                        <p class="font-semibold text-gray-800" data-translate-key="testimonial-6-author">- Ana Georgescu, Studentă, Paris</p>
+                    </div>
+                    <!-- Testimonial 7 (French) -->
+                    <div class="testimonial-card bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <i class="fas fa-quote-left text-indigo-400 text-3xl mb-4"></i>
+                        <p class="text-gray-700 italic mb-6" data-translate-key="testimonial-7-text">
+                            « J'ai été impressionné par la fluidité de l'interprétation lors de notre réunion d'affaires à Bucarest. Cristina a vraiment facilité les échanges. »
+                        </p>
+                        <p class="font-semibold text-gray-800" data-translate-key="testimonial-7-author">- Olivier Dupont, Dirigeant d'entreprise, Nantes</p>
+                    </div>
+                    <!-- Testimonial 8 (Romanian) -->
+                    <div class="testimonial-card bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <i class="fas fa-quote-left text-indigo-400 text-3xl mb-4"></i>
+                        <p class="text-gray-700 italic mb-6" data-translate-key="testimonial-8-text">
+                            « Serviciile de traducere oferite au fost impecabile pentru dosarul meu de rezidență. Cristina a demonstrat un profesionalism deosebit și o atenție la detalii. »
+                        </p>
+                        <p class="font-semibold text-gray-800" data-translate-key="testimonial-8-author">- Maria Dumitrescu, Pensionară, Galați</p>
+                    </div>
+                    <!-- Testimonial 9 (French) -->
+                    <div class="testimonial-card bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <i class="fas fa-quote-left text-indigo-400 text-3xl mb-4"></i>
+                        <p class="text-gray-700 italic mb-6" data-translate-key="testimonial-9-text">
+                            « Accompagnement irréprochable pour l'acquisition de notre bien en Roumanie. Les traductions notariales étaient parfaites, et Cristina très disponible. »
+                        </p>
+                        <p class="font-semibold text-gray-800" data-translate-key="testimonial-9-author">- Famille Leroy, Investisseurs, Bordeaux</p>
+                    </div>
+                    <!-- Testimonial 10 (Romanian) -->
+                    <div class="testimonial-card bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <i class="fas fa-quote-left text-indigo-400 text-3xl mb-4"></i>
+                        <p class="text-gray-700 italic mb-6" data-translate-key="testimonial-10-text">
+                            « Recomand cu încredere serviciile Cristinei. Traduceri rapide și precise pour les documents médicaux. Foarte profesionistă! »
+                        </p>
+                        <p class="font-semibold text-gray-800" data-translate-key="testimonial-10-author">- Dr. Radu Ionescu, Medic, Craiova</p>
+                    </div>
+                </div>
+                <button class="absolute left-0 top-1/2 -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-75 transition" onclick="scrollCarousel(-1)">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="absolute right-0 top-1/2 -translate-y-1/2 bg-gray-800 bg-opacity-50 text-white p-3 rounded-full hover:bg-opacity-75 transition" onclick="scrollCarousel(1)">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+            <div class="mt-12">
+                <a href="contact.html" class="bg-indigo-700 text-white px-6 py-3 rounded-xl hover:bg-indigo-800 transition duration-300 shadow-md" data-translate-key="testimonials-cta">
+                    <i class="fas fa-comment-alt mr-2"></i> Laissez votre avis !
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12 rounded-t-3xl">
+        <div class="container mx-auto px-4 text-center">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-8 space-y-4 md:space-y-0">
+                <div class="text-xl font-bold text-indigo-400" data-translate-key="footer-brand">FR | RO Traduction</div>
+                <ul class="flex space-x-6">
+                    <li><a href="index.html" class="text-gray-300 hover:text-white transition duration-300" data-translate-key="nav-home">Accueil</a></li>
+                    <li><a href="services.html" class="text-gray-300 hover:text-white transition duration-300" data-translate-key="nav-services">Services</a></li>
+                    <li><a href="services.html#quote-form" class="text-gray-300 hover:text-white transition duration-300" data-translate-key="nav-quote">Devis</a></li>
+                    <li><a href="services.html#interpreter-form" class="text-gray-300 hover:text-white transition duration-300" data-translate-key="nav-interpretation">Interprétation</a></li>
+                </ul>
+            </div>
+            <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400 space-y-4 md:space-y-0">
+                <div class="flex space-x-4">
+                    <a href="mentions-legales.html" class="hover:text-white transition duration-300" data-translate-key="footer-legal-mentions">Mentions légales</a>
+                    <a href="cgv-cgu.html" class="hover:text-white transition duration-300" data-translate-key="footer-cgv-cgu">CGV/CGU</a>
+                </div>
+                <div data-translate-key="footer-secure-payment">
+                    Paiement sécurisé : <i class="fab fa-stripe mr-2"></i>Stripe <i class="fab fa-paypal ml-4 mr-2"></i>PayPal
+                </div>
+                <div data-translate-key="footer-certification">
+                    Certification : Cristina Vlad + n° d'assermentation [XXXX/20XX]
+                </div>
+                 <!-- Language Switcher in Footer -->
+                <div class="ml-4">
+                    <label for="site-language-footer" class="sr-only" data-translate-key="contact-label-site-language">Langue du site :</label>
+                    <select id="site-language-footer" name="site-language" class="bg-gray-700 text-white rounded-lg px-3 py-1 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-600">
+                        <option value="fr" data-translate-key="contact-option-fr">Français</option>
+                        <option value="ro">Română</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links and cross-page navigation
+        document.querySelectorAll('a[href]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href.startsWith('#')) {
+                    // Internal anchor link on the same page
+                    e.preventDefault();
+                    const targetId = href.substring(1);
+                    document.getElementById(targetId).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                } else if (href.includes('.html#')) {
+                    // Link to an anchor on another HTML page
+                    // Let default behavior handle navigation, then scroll
+                    // No need to preventDefault for cross-page anchors, browser handles it post-load
+                }
+            });
+        });
+
+        // Language translation logic
+        const translations = {
+            fr: {
+                // Header & Navigation
+                'page-title': 'Accueil - Agence de Traduction FR RO',
+                'brand-name': 'FR | RO Traduction',
+                'nav-home': 'Accueil',
+                'nav-services': 'Services',
+                'nav-about': 'À propos',
+                'nav-contact': 'Contact',
+                'nav-quote': 'Devis',
+                'nav-interpretation': 'Interprétation',
+
+                // Home Section (Hero)
+                'home-main-title': 'Votre Pont Linguistique entre la France et la Roumanie',
+                'home-tagline': 'Des traductions certifiées et un accompagnement personnalisé pour toutes vos démarches.',
+                'home-cta-quote': 'Obtenez votre devis rapide',
+                'home-cta-discover-services': 'Découvrez nos services',
+
+                // Home Section (Value Proposition)
+                'home-value-prop-title': 'Pourquoi choisir FR | RO Traduction ?',
+                'home-value-prop-1-title': 'Confiance & Expertise',
+                'home-value-prop-1-desc': 'Profitez d\'une expertise reconnue et d\'un accompagnement personnalisé.',
+                'home-value-prop-2-title': 'Fiabilité & Certification',
+                'home-value-prop-2-desc': 'Vos documents sont entre les mains d\'une traductrice assermentée, garantissant leur validité.',
+                'home-value-prop-3-title': 'Rapidité & Simplicité',
+                'home-value-prop-3-desc': 'Un processus 100% digital pour des délais de livraison optimisés.',
+
+                // How It Works Section (Home Page Concise)
+                'home-how-it-works-title': 'Un service rapide, 100% digital, en 4 étapes.',
+                'how-it-works-step1-title': 'Téléversement du document',
+                'how-it-works-step1-desc': 'Vous téléversez votre document (scan/photo propre).',
+                'how-it-works-step2-title': 'Réception du devis',
+                'how-it-works-step2-desc': 'Nous vous envoyons un devis sous 24h.',
+                'how-it-works-step3-title': 'Paiement en ligne',
+                'how-it-works-step3-desc': 'Vous payez en ligne (CB, PayPal, virement).',
+                'how-it-works-step4-title': 'Réception de la traduction',
+                'how-it-works-step4-desc': 'Vous recevez la traduction par e-mail ou courrier.',
+                'how-it-works-delivery-times': 'Délais standard: <span class="font-semibold text-indigo-700">2 à 4 jours ouvrés</span>. Option express disponible sous <span class="font-semibold text-indigo-700">24-48h</span>.',
+                'how-it-works-delivery-standard': '2 à 4 jours ouvrés',
+                'how-it-works-delivery-express': '24-48h',
+
+                // Who We Help Section (Home Page Concise)
+                'home-who-we-help-title': 'À qui s\'adresse notre service ?',
+                'home-who-we-help-subtitle': 'Un pont entre la France et la Roumanie.',
+                'home-who-we-help-item1': 'Les Roumains vivant en France (études, travail, regroupement familial)',
+                'home-who-we-help-item2': 'Les Français installés ou investisseurs en Roumanie',
+                'home-who-we-help-item3': 'Les couples binationaux et familles franco-roumaines',
+                'home-who-we-help-item4': 'Les entreprises & PMEs (développement international, conformité)',
+                'home-who-we-help-confidentiality': 'Chaque dossier est traité de façon confidentielle, rapide et personnalisée.',
+
+                // Testimonials Section
+                'testimonials-title': 'Ce que nos clients disent de nous',
+                'testimonial-1-text': '« Grâce à Cristina, j\'ai pu faire traduire mon acte de mariage sans aucune difficulté pour mon dossier de naturalisation en France. Rapidité et professionnalisme, je recommande les yeux fermés ! »',
+                'testimonial-1-author': '- Marie Dubois, Particulière, Paris',
+                'testimonial-2-text': '« Traducerea statutului firmei noastre de către Cristina a fost de o precizie exemplară. Expertiza sa juridică este un atu major pentru investițiile noastre în România. »',
+                'testimonial-2-author': '- Ion Popescu, Antreprenor, București',
+                'testimonial-3-text': '« L\'interprétariat lors de mon rendez-vous chez le notaire à Bucarest a été d\'une aide précieuse. Cristina a su clarifier tous les points complexes avec une grande pédagogie. Un service irréprochable. »',
+                'testimonial-3-author': '- Sophie Martin, Expatriée, Bucarest',
+                'testimonial-4-text': '« Am avut nevoie urgent de o traducere pentru o licitație și Cristina a livrat impecabil în termen. Profesionalism și eficiență la superlativ! »',
+                'testimonial-4-author': '- Elena Tudor, Manager Proiect, Cluj-Napoca',
+                'testimonial-5-text': '« Pour notre mariage binational, les traductions de Cristina ont été parfaites et acceptées sans problème. Un service humain et rassurant. »',
+                'testimonial-5-author': '- Marc & Andreea, Couple, Nice',
+                'testimonial-6-text': '« Fiind studentă în Franța, am avut nevoie de traducerea diplomei. Cristina a fost foarte rapidă și documentul a fost validat imediat. Mulțumesc mult! »',
+                'testimonial-6-author': '- Ana Georgescu, Studentă, Paris',
+                'testimonial-7-text': '« J\'ai été impressionné par la fluidité de l\'interprétation lors de notre réunion d\'affaires à Bucarest. Cristina a vraiment facilité les échanges. »',
+                'testimonial-7-author': '- Olivier Dupont, Dirigeant d\'entreprise, Nantes',
+                'testimonial-8-text': '« Serviciile de traducere oferite au fost impecabile pentru dosarul meu de rezidență. Cristina a demonstrat un profesionalism deosebit și o atenție la detalii. »',
+                'testimonial-8-author': '- Maria Dumitrescu, Pensionară, Galați',
+                'testimonial-9-text': '« Accompagnement irréprochable pour l\'acquisition de notre bien en Roumanie. Les traductions notariales étaient parfaites, et Cristina très disponible. »',
+                'testimonial-9-author': '- Famille Leroy, Investisseurs, Bordeaux',
+                'testimonial-10-text': '« Recomand cu încredere les services de Cristina. Traduceri rapide și precise pour les documents médicaux. Foarte profesionistă! »',
+                'testimonial-10-author': '- Dr. Radu Ionescu, Medic, Craiova',
+                'testimonials-cta': 'Laissez votre avis !',
+
+                // Footer
+                'footer-brand': 'FR | RO Traduction',
+                'footer-legal-mentions': 'Mentions légales',
+                'footer-cgv-cgu': 'CGV/CGU',
+                'footer-secure-payment': 'Paiement sécurisé :',
+                'footer-certification': 'Certification : Cristina Vlad + n° d\'assermentation [XXXX/20XX]',
+                'contact-label-site-language': 'Langue du site :',
+                'contact-option-fr': 'Français',
+                'contact-option-ro': 'Română',
+            },
+            ro: {
+                // Header & Navigation
+                'page-title': 'Acasă - Agenție de Traduceri FR RO',
+                'brand-name': 'FR | RO Traducere',
+                'nav-home': 'Acasă',
+                'nav-services': 'Servicii',
+                'nav-about': 'Despre Noi',
+                'nav-contact': 'Contact',
+                'nav-quote': 'Ofertă',
+                'nav-interpretation': 'Interpretare',
+
+                // Home Section (Hero)
+                'home-main-title': 'Puntea Voastră Lingvistică între Franța și România',
+                'home-tagline': 'Traduceri autorizate și asistență personalizată pentru toate demersurile dumneavoastră.',
+                'home-cta-quote': 'Obțineți oferta rapidă',
+                'home-cta-discover-services': 'Descoperiți serviciile noastre',
+
+                // Home Section (Value Proposition)
+                'home-value-prop-title': 'De ce să alegeți FR | RO Traducere ?',
+                'home-value-prop-1-title': 'Încredere & Expertiză',
+                'home-value-prop-1-desc': 'Beneficiați de o expertiză recunoscută și de o asistență personalizată.',
+                'home-value-prop-2-title': 'Fiabilitate & Certificare',
+                'home-value-prop-2-desc': 'Documentele dumneavoastră sunt în mâinile unui traducător autorizat, garantându-le valabilitatea.',
+                'home-value-prop-3-title': 'Rapiditate & Simplitate',
+                'home-value-prop-3-desc': 'Un proces 100% digital pentru termene de livrare optimizate.',
+
+                // How It Works Section (Home Page Concise)
+                'home-how-it-works-title': 'Un serviciu rapid, 100% digital, în 4 pași.',
+                'how-it-works-step1-title': 'Încărcarea documentului',
+                'how-it-works-step1-desc': 'Încărcați documentul (scan/fotografie clară).',
+                'how-it-works-step2-title': 'Primirea ofertei',
+                'how-it-works-step2-desc': 'Vă trimitem o ofertă în 24 de ore.',
+                'how-it-works-step3-title': 'Plata online',
+                'how-it-works-step3-desc': 'Plătiți online (card bancar, PayPal, transfer bancar).',
+                'how-it-works-step4-title': 'Primirea traducerii',
+                'how-it-works-step4-desc': 'Primiți traducerea prin e-mail sau poștă.',
+                'how-it-works-delivery-times': 'Termen standard: <span class="font-semibold text-indigo-700">2-4 zile lucrătoare</span>. Opțiune expres disponibilă în <span class="font-semibold text-indigo-700">24-48 de ore</span>.',
+                'how-it-works-delivery-standard': '2-4 zile lucrătoare',
+                'how-it-works-delivery-express': '24-48 de ore',
+
+                // Who We Help Section (Home Page Concise)
+                'home-who-we-help-title': 'Cui se adresează serviciul nostru ?',
+                'home-who-we-help-subtitle': 'O punte între Franța și România.',
+                'home-who-we-help-item1': 'Români care locuiesc în Franța (studii, muncă, reîntregire familială)',
+                'home-who-we-help-item2': 'Francezi care locuiesc sau investesc în România',
+                'home-who-we-help-item3': 'Cupluri binationale și familii franco-române',
+                'home-who-we-help-item4': 'Companiilor și IMM-urilor (dezvoltare internațională, conformitate)',
+                'home-who-we-help-confidentiality': 'Fiecare dosar este tratat confidențial, rapid și personalizat.',
+
+                // Testimonials Section
+                'testimonials-title': 'Ce spun clienții noștri despre noi',
+                'testimonial-1-text': '« Datorită Cristinei, am reușit să îmi traduc certificatul de căsătorie fără nicio dificultate pentru dosarul meu de naturalizare în Franța. Rapiditate și profesionalism, recomand cu încredere ! »',
+                'testimonial-1-author': '- Marie Dubois, Persoană fizică, Paris',
+                'testimonial-2-text': '« Traducerea statutului firmei noastre de către Cristina a fost de o precizie exemplară. Expertiza sa juridică este un atu major pentru investițiile noastre în România. »',
+                'testimonial-2-author': '- Ion Popescu, Antreprenor, București',
+                'testimonial-3-text': '« Interpretarea la întâlnirea mea la notar în București a fost de un ajutor neprețuit. Cristina a reușit să clarifice toate punctele complexe cu o mare pedagogie. Un serviciu ireproșabil. »',
+                'testimonial-3-author': '- Sophie Martin, Expatriată, București',
+                'testimonial-4-text': '« Am avut nevoie urgent de o traducere pentru o licitație și Cristina a livrat impecabil în termen. Profesionalism și eficiență la superlativ! »',
+                'testimonial-4-author': '- Elena Tudor, Manager Proiect, Cluj-Napoca',
+                'testimonial-5-text': '« Pentru căsătoria noastră binatională, traducerile Cristinei au fost perfecte și acceptate fără probleme. Un serviciu uman și liniștitor. »',
+                'testimonial-5-author': '- Marc & Andreea, Cuplu, Nisa',
+                'testimonial-6-text': '« Fiind studentă în Franța, am avut nevoie de traducerea diplomei. Cristina a fost foarte rapidă și documentul a fost validat imediat. Mulțumesc mult! »',
+                'testimonial-6-author': '- Ana Georgescu, Studentă, Paris',
+                'testimonial-7-text': '« Am fost impresionat de fluiditatea interpretării în cadrul ședinței noastre de afaceri din București. Cristina a facilitat cu adevărat schimburile. »',
+                'testimonial-7-author': '- Olivier Dupont, Director de companie, Nantes',
+                'testimonial-8-text': '« Serviciile de traducere oferite au fost impecabile pentru dosarul meu de rezidență. Cristina a demonstrat un profesionalism deosebit și o atenție la detalii. »',
+                'testimonial-8-author': '- Maria Dumitrescu, Pensionară, Galați',
+                'testimonial-9-text': '« Asistență ireproșabilă pentru achiziționarea proprietății noastre în România. Traducerile notariale au fost perfecte, iar Cristina foarte disponibilă. »',
+                'testimonial-9-author': '- Familia Leroy, Investitori, Bordeaux',
+                'testimonial-10-text': '« Recomand cu încredere serviciile Cristinei. Traduceri rapide și precise pentru documentele mele medicale. Foarte profesionistă! »',
+                'testimonial-10-author': '- Dr. Radu Ionescu, Medic, Craiova',
+                'testimonials-cta': 'Lăsați-vă părerea !',
+
+                // Footer
+                'footer-brand': 'FR | RO Traducere',
+                'footer-legal-mentions': 'Mențiuni legale',
+                'footer-cgv-cgu': 'Termeni și Condiții',
+                'footer-secure-payment': 'Plată securizată :',
+                'footer-certification': 'Certificare : Cristina Vlad + nr. autorizație [XXXX/20XX]',
+                'contact-label-site-language': 'Limba site-ului :',
+                'contact-option-fr': 'Franceză',
+                'contact-option-ro': 'Română',
+            }
+        };
+
+        // Carousel scrolling logic
+        let currentScrollPosition = 0;
+        const scrollAmount = 300; // Adjust based on card width + gap
+
+        function scrollCarousel(direction) {
+            const carousel = document.getElementById('testimonial-carousel');
+            const cardWidth = carousel.querySelector('.testimonial-card').offsetWidth;
+            const gap = 32; // Corresponds to Tailwind 'space-x-8'
+            const scrollDistance = cardWidth + gap;
+
+            if (direction === 1) {
+                currentScrollPosition += scrollDistance;
+                // Loop back to start if at end (simplified, or clamp to max scroll)
+                if (currentScrollPosition >= carousel.scrollWidth - carousel.clientWidth) {
+                    currentScrollPosition = 0;
+                }
+            } else {
+                currentScrollPosition -= scrollDistance;
+                // Loop to end if at beginning (simplified, or clamp to min scroll)
+                if (currentScrollPosition < 0) {
+                    currentScrollPosition = carousel.scrollWidth - carousel.clientWidth;
+                }
+            }
+            carousel.scrollTo({
+                left: currentScrollPosition,
+                behavior: 'smooth'
+            });
+        }
+
+        // Auto-scroll functionality (optional, can be disabled if user prefers manual)
+        let autoScrollInterval;
+        const startAutoScroll = () => {
+            if (!autoScrollInterval) {
+                autoScrollInterval = setInterval(() => {
+                    const carousel = document.getElementById('testimonial-carousel');
+                    const isAtEnd = carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 1; // -1 for small floating point errors
+                    if (isAtEnd) {
+                        carousel.scrollTo({ left: 0, behavior: 'smooth' });
+                        currentScrollPosition = 0;
+                    } else {
+                        scrollCarousel(1);
+                    }
+                }, 5000); // Scroll every 5 seconds
+            }
+        };
+
+        const stopAutoScroll = () => {
+            clearInterval(autoScrollInterval);
+            autoScrollInterval = null;
+        };
+
+        // Initialize language on page load based on saved preference or default to French
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('siteLanguage') || 'fr';
+            setLanguage(savedLang);
+            startAutoScroll(); // Start auto-scroll on page load
+        });
+
+        // Pause auto-scroll on hover, resume on mouse leave
+        const carouselContainer = document.getElementById('testimonials');
+        if (carouselContainer) {
+            carouselContainer.addEventListener('mouseenter', stopAutoScroll);
+            carouselContainer.addEventListener('mouseleave', startAutoScroll);
+        }
+
+        // Event listener for header language switcher
+        document.getElementById('language-switcher').addEventListener('change', (event) => {
+            const newLang = event.target.value;
+            localStorage.setItem('siteLanguage', newLang); // Save preference
+            setLanguage(newLang);
+        });
+
+        // Event listener for footer language switcher
+        document.getElementById('site-language-footer').addEventListener('change', (event) => {
+            const newLang = event.target.value;
+            localStorage.setItem('siteLanguage', newLang); // Save preference
+            setLanguage(newLang);
+        });
+
+        function setLanguage(lang) {
+            document.documentElement.lang = lang; // Set HTML lang attribute
+            document.getElementById('page-title').textContent = translations[lang]['page-title'];
+
+            document.querySelectorAll('[data-translate-key]').forEach(element => {
+                const key = element.getAttribute('data-translate-key');
+                const attrToTranslate = element.getAttribute('data-translate-attr');
+
+                if (translations[lang] && translations[lang][key]) {
+                    if (attrToTranslate) {
+                        // For attributes like placeholder
+                        element.setAttribute(attrToTranslate, translations[lang][key]);
+                    } else {
+                        // For text content, preserve HTML if present (like in how-it-works-delivery-times)
+                        if (key.includes('delivery-times') || key.includes('about-intro') || key.includes('footer-certification') || key.includes('testimonial') || key.includes('footer-secure-payment')) {
+                            element.innerHTML = translations[lang][key];
+                        } else {
+                            element.textContent = translations[lang][key];
+                        }
+                    }
+                }
+            });
+
+            // Update language switcher in header if changed from footer or vice-versa
+            const langSwitcherHeader = document.getElementById('language-switcher');
+            const langSwitcherFooter = document.getElementById('site-language-footer');
+            if (langSwitcherHeader && langSwitcherHeader.value !== lang) {
+                langSwitcherHeader.value = lang;
+            }
+            if (langSwitcherFooter && langSwitcherFooter.value !== lang) {
+                langSwitcherFooter.value = lang;
+            }
+        }
+    </script>
+</body>
+</html>
